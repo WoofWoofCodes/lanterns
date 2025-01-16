@@ -65,7 +65,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     multilights.addLightSource(p, 2)
 })
 
-tiles.setCurrentTilemap(tilemap`level1`)
+//tiles.setCurrentTilemap(tilemap`level1`)
 
 pause(1000)
 multilights.setShaderRamp(img`
