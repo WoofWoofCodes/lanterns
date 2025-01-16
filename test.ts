@@ -18,7 +18,7 @@ const testImages = [
 
 scene.setBackgroundColor(Math.randomRange(2, 14))
 
-multilights.addFlashLightSource(s, 0, 80, 60, 10, 0)
+multilights.addFlashLightSource(s, 0.5, 80.5, 60.5, 10.5, 0.5)
 multilights.addLightSource(s, 10, 10)
 multilights.toggleLighting(true)
 

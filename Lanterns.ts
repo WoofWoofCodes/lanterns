@@ -1,6 +1,6 @@
 //% icon="\uf185" color="#8f1fff"
 namespace multilights {
-    // The top row is just the palette, each row gets darker
+    // The top row is just the palette, each row gets darker //pins
 
     const palette_ramps = image.ofBuffer(hex`e4100400ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000`);
     
@@ -151,7 +151,7 @@ namespace multilights {
         setColorRamp(ramp: Image) {
             this.bandPalettes = [];
             for (let band = 0; band < 6; band++) {
-                const buffer = pins.createBuffer(16);
+                const buffer = Buffer.create(16);
                 for (let i = 0; i < 16; i++) {
                     buffer[i] = ramp.getPixel(i, band + 0);
                 }
@@ -340,7 +340,7 @@ namespace lightsource {
 
         prepareOffset() {
             const halfh = this.lightRange;
-            this.offsetTable = pins.createBuffer(halfh);
+            this.offsetTable = Buffer.create(halfh);
 
             // Approach is roughly based on https://hackernoon.com/pico-8-lighting-part-1-thin-dark-line-8ea15d21fed7
             let x: number;
@@ -507,7 +507,7 @@ namespace lightsource {
 
         prepareOffset() {
             const halfh = this._centerRadius + this.rings * this._bandWidth;
-            this.offsetTable = pins.createBuffer((this.rings + 1) * halfh);
+            this.offsetTable = Buffer.create((this.rings + 1) * halfh);
 
             // Approach is roughly based on https://hackernoon.com/pico-8-lighting-part-1-thin-dark-line-8ea15d21fed7
             let x: number;
