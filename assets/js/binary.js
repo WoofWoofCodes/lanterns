@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.58/---simulator","cdnUrl":"https://cdn.makecode.com","version":"1.0.0","target":"arcade","targetVersion":"1.12.58","repo":"woofwoofcodes/lanterns"}
-// total=1441856 new=13.67% cached=80.94% other=5.40%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.58/---simulator","cdnUrl":"https://cdn.makecode.com","version":"1.0.1","target":"arcade","targetVersion":"1.12.58","repo":"woofwoofcodes/lanterns"}
+// total=1432187 new=13.08% cached=81.48% other=5.43%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -468,7 +468,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P68753(s) {
+function _main___P77381(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -891,38 +891,38 @@ switch (step) {
     s.callLocIdx = 62; s.pc = 36; return s.tmp_0;
   case 36:
     r0 = s.retval;
-    r0 = pxsim.image.ofBuffer(_hex67413);
-    globals.palette_ramps___67414 = (r0);
-    r0 = pxsim.image.ofBuffer(_hex54244);
-    globals.transparency16___50531 = (r0);
+    r0 = pxsim.image.ofBuffer(_hex74590);
+    globals.palette_ramps___74591 = (r0);
+    r0 = pxsim.image.ofBuffer(_hex69074);
+    globals.transparency16___69075 = (r0);
     s.tmp_0 = helpers__registerFactory__P49476_mk(s);
     s.tmp_0.arg0 = "tilemap";
-    s.tmp_0.arg1 = myTiles_inline__P54248;
-    s.callLocIdx = 135; s.pc = 37; return s.tmp_0;
+    s.tmp_0.arg1 = myTiles_inline__P69079;
+    s.callLocIdx = 129; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
     s.tmp_0 = helpers__registerFactory__P49476_mk(s);
     s.tmp_0.arg0 = "tile";
-    s.tmp_0.arg1 = myTiles_inline__P54315;
-    s.callLocIdx = 137; s.pc = 38; return s.tmp_0;
+    s.tmp_0.arg1 = myTiles_inline__P69095;
+    s.callLocIdx = 131; s.pc = 38; return s.tmp_0;
   case 38:
     r0 = s.retval;
     s.tmp_0 = sprites_create__P48419_mk(s);
     s.tmp_0.arg0 = globals.princess2Front___49777;
     s.tmp_0.arg1 = globals.Player___48624;
-    s.callLocIdx = 138; s.pc = 39; return s.tmp_0;
+    s.callLocIdx = 132; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
-    globals.s___50532 = (r0);
+    globals.s___76980 = (r0);
     s.tmp_0 = controller_moveSprite__P48311_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
+    s.tmp_0.arg0 = globals.s___76980;
     s.tmp_0.arg1 = 100;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 139; s.pc = 40; return s.tmp_0;
+    s.callLocIdx = 133; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
     s.tmp_0 = if_z_2_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
+    s.tmp_0.arg0 = globals.s___76980;
     s.tmp_0.arg1 = 10;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "z", s.tmp_0.arg1);
@@ -930,20 +930,20 @@ switch (step) {
       s.tmp_0.fn = s.tmp_0.arg0.vtable.iface["set/z"];
       if (s.tmp_0.fn === null) { s.tmp_0.arg0.fields["z"] = s.tmp_0.arg1; }
       else if (s.tmp_0.fn === undefined) { failedCast(s.tmp_0.arg0) } 
-     else { s.callLocIdx = 140; s.pc = 41; return s.tmp_0; }
+     else { s.callLocIdx = 134; s.pc = 41; return s.tmp_0; }
     }
   case 41:
     r0 = s.retval;
     s.tmp_0 = scene_cameraFollowSprite__P49034_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
-    s.callLocIdx = 141; s.pc = 42; return s.tmp_0;
+    s.tmp_0.arg0 = globals.s___76980;
+    s.callLocIdx = 135; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
     s.tmp_0 = controller_moveSprite__P48311_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
+    s.tmp_0.arg0 = globals.s___76980;
     s.tmp_0.arg1 = 100;
     s.tmp_0.arg2 = 100;
-    s.callLocIdx = 142; s.pc = 43; return s.tmp_0;
+    s.callLocIdx = 136; s.pc = 43; return s.tmp_0;
   case 43:
     r0 = s.retval;
     r0 = pxsim_Array__mk();
@@ -958,99 +958,99 @@ switch (step) {
     r0 = pxsim_Array__push(s.tmp_0, globals.floorLight0___50159);
     r0 = pxsim_Array__push(s.tmp_0, globals.greenInnerNorthEast___50180);
     r0 = pxsim_Array__push(s.tmp_0, globals.purpleOuterNorthWest___50201);
-    globals.testImages___50533 = (s.tmp_0);
+    globals.testImages___76993 = (s.tmp_0);
     s.tmp_0 = scene_setBackgroundColor__P49027_mk(s);
     r0 = pxsim.Math_.randomRange(2, 14);
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 143; s.pc = 44; return s.tmp_0;
+    s.callLocIdx = 137; s.pc = 44; return s.tmp_0;
   case 44:
     r0 = s.retval;
-    s.tmp_0 = multilights_addFlashLightSource__P67796_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
-    s.tmp_0.arg1 = 0;
-    s.tmp_0.arg2 = 80;
-    s.tmp_0.arg3 = 60;
-    s.tmp_0.arg4 = 10;
-    s.tmp_0.arg5 = 0;
+    s.tmp_0 = multilights_addFlashLightSource__P74973_mk(s);
+    s.tmp_0.arg0 = globals.s___76980;
+    s.tmp_0.arg1 = 0.5;
+    s.tmp_0.arg2 = 80.5;
+    s.tmp_0.arg3 = 60.5;
+    s.tmp_0.arg4 = 10.5;
+    s.tmp_0.arg5 = 0.5;
     s.tmp_0.arg6 = 5;
-    s.callLocIdx = 144; s.pc = 45; return s.tmp_0;
+    s.callLocIdx = 138; s.pc = 45; return s.tmp_0;
   case 45:
     r0 = s.retval;
-    s.tmp_0 = multilights_addLightSource__P67780_mk(s);
-    s.tmp_0.arg0 = globals.s___50532;
+    s.tmp_0 = multilights_addLightSource__P74957_mk(s);
+    s.tmp_0.arg0 = globals.s___76980;
     s.tmp_0.arg1 = 10;
     s.tmp_0.arg2 = 10;
     s.tmp_0.arg3 = 2.5;
-    s.callLocIdx = 145; s.pc = 46; return s.tmp_0;
+    s.callLocIdx = 139; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
-    s.tmp_0 = multilights_toggleLighting__P67769_mk(s);
+    s.tmp_0 = multilights_toggleLighting__P74946_mk(s);
     s.tmp_0.arg0 = true;
-    s.callLocIdx = 146; s.pc = 47; return s.tmp_0;
+    s.callLocIdx = 140; s.pc = 47; return s.tmp_0;
   case 47:
     r0 = s.retval;
     s.tmp_0 = scene_setBackgroundImage__P49029_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex54357);
+    r0 = pxsim.image.ofBuffer(_hex77016);
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 147; s.pc = 48; return s.tmp_0;
+    s.callLocIdx = 141; s.pc = 48; return s.tmp_0;
   case 48:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P48340_mk(s);
     s.tmp_0.arg0 = globals.A___48257;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P54364;
-    s.callLocIdx = 151; s.pc = 49; return s.tmp_0;
+    s.tmp_0.arg2 = inline__P77024;
+    s.callLocIdx = 145; s.pc = 49; return s.tmp_0;
   case 49:
     r0 = s.retval;
     s.tmp_0 = controller_Button_onEvent__P48340_mk(s);
     s.tmp_0.arg0 = globals.B___48258;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P54373;
-    s.callLocIdx = 157; s.pc = 50; return s.tmp_0;
+    s.tmp_0.arg2 = inline__P77033;
+    s.callLocIdx = 151; s.pc = 50; return s.tmp_0;
   case 50:
     r0 = s.retval;
     s.tmp_0 = tiles_setCurrentTilemap__P48908_mk(s);
     s.tmp_1 = helpers_getTilemapByName__P49479_mk(s);
     s.tmp_1.arg0 = "level1";
-    s.callLocIdx = 158; s.pc = 52; return s.tmp_1;
+    s.callLocIdx = 152; s.pc = 52; return s.tmp_1;
   case 52:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 159; s.pc = 51; return s.tmp_0;
+    s.callLocIdx = 153; s.pc = 51; return s.tmp_0;
   case 51:
     r0 = s.retval;
     s.tmp_0 = pause__P46556_mk(s);
     s.tmp_0.arg0 = 1000;
-    s.callLocIdx = 160; s.pc = 53; return s.tmp_0;
+    s.callLocIdx = 154; s.pc = 53; return s.tmp_0;
   case 53:
     r0 = s.retval;
-    s.tmp_0 = multilights_setShaderRamp__P67791_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex54398);
+    s.tmp_0 = multilights_setShaderRamp__P74968_mk(s);
+    r0 = pxsim.image.ofBuffer(_hex77058);
     s.tmp_0.arg0 = r0;
-    s.callLocIdx = 161; s.pc = 54; return s.tmp_0;
+    s.callLocIdx = 155; s.pc = 54; return s.tmp_0;
   case 54:
     r0 = s.retval;
     s.tmp_0 = forever__P48227_mk(s);
-    s.tmp_0.arg0 = inline__P54400;
-    s.callLocIdx = 173; s.pc = 55; return s.tmp_0;
+    s.tmp_0.arg0 = inline__P77060;
+    s.callLocIdx = 167; s.pc = 55; return s.tmp_0;
   case 55:
     r0 = s.retval;
     s.tmp_0 = forever__P48227_mk(s);
-    s.tmp_0.arg0 = inline__P54428;
-    s.callLocIdx = 177; s.pc = 56; return s.tmp_0;
+    s.tmp_0.arg0 = inline__P77088;
+    s.callLocIdx = 171; s.pc = 56; return s.tmp_0;
   case 56:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P68753.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
-_main___P68753.continuations = [  ]
+_main___P77381.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"main.ts","functionName":"<main>","argumentNames":[]}
+_main___P77381.continuations = [  ]
 
-function _main___P68753_mk(s) {
+function _main___P77381_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P68753, depth: s.depth + 1,
+        parent: s, fn: _main___P77381, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1090,10 +1090,10 @@ const _hex52570 = pxsim.BufferMethods.createBufferFromHex("8704100010000000dbddd
 const _hex52596 = pxsim.BufferMethods.createBufferFromHex("8704100010000000ccc6cc666cc67667ccc6c6666cc77677ccc6c6666cc76c77ccc6c6cc6cc76c66ccccc6666c77ccccccccc6666c7777c6ccc6c666cc6666ccccc6c666c7ccccccccc6c67666666c66ccc6c66666c66c66ccc6c6ccccccccccccc666c66c6666c6cccccccccccccccccccc66666666cc66cccccccccccccccccccccccccccccccc")
 const _hex52638 = pxsim.BufferMethods.createBufferFromHex("8704100010000000cfaaaaaacaacaaaafc3c3333333c3333cacc333333cc33333accacaaaacaaaaa3ac3cccccccccccc3aa3cc3c333333ca3aa3ccccaaaaaacc3aa3accccccccccc3aa33ccaccaaaaaa3ca33ccaccacaaaa3ca33ccacacccccccca33ccaaaccacaaccac3ccaaacccccc3acc3ccaaaacccaa3aa3accaaaaccccf3aa3cccaaaacacfc")
 const _hex52706 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000c8acca0000000000ccfaa80a000000c0ccca8fcc000000ccbcabaccacc0000ccffabaabacb0c00f8ffb8caacbbcc80f8ffbaccffbacac0ff8fabccffbfcbc0ccaccccafa6fcbccaaccccacaa66ccfcafcaccaabba6cc88ffaaccfcb8ca0cc0ffacccffcfcb00c0cca8fcffcfc60000ccccfc8f6ccc0000c0ccccacca0000")
-const _hex67413 = pxsim.BufferMethods.createBufferFromHex("8704100004000000ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000")
-const _hex54244 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54357 = pxsim.BufferMethods.createBufferFromHex("8704100004000000ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000")
-const _hex54398 = pxsim.BufferMethods.createBufferFromHex("87041000060000000000f000d1cb5f00a200f700b30cfe00e40cf80045ce4a00860cf40067c8f200c800f40069c8f200ba0cf500cb00fb000c00fd00bd0cfc00ce00f3000000f100")
+const _hex74590 = pxsim.BufferMethods.createBufferFromHex("8704100004000000ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000")
+const _hex69074 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex77016 = pxsim.BufferMethods.createBufferFromHex("8704100004000000ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000")
+const _hex77058 = pxsim.BufferMethods.createBufferFromHex("87041000060000000000f000d1cb5f00a200f700b30cfe00e40cf80045ce4a00860cf40067c8f200c800f40069c8f200ba0cf500cb00fb000c00fd00bd0cfc00ce00f3000000f100")
 
 
 
@@ -1605,7 +1605,7 @@ function gameOverConfig_inline__P51116_mk(s) {
 
 
 
-function myTiles_inline__P54248(s) {
+function myTiles_inline__P69079(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1621,200 +1621,59 @@ switch (step) {
     }
     s.tmp_1 = helpers_stringTrim__P46266_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    s.callLocIdx = 127; s.pc = 17; return s.tmp_1;
-  case 17:
+    s.callLocIdx = 127; s.pc = 5; return s.tmp_1;
+  case 5:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_pxtcore.switch_eq("level1", s.tmp_0);
     if (r0) { step = 1; continue; }
     r0 = pxsim_pxtcore.switch_eq("level1", s.tmp_0);
     if (r0) { step = 2; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level2", s.tmp_0);
-    if (r0) { step = 3; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level2", s.tmp_0);
-    if (r0) { step = 4; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level3", s.tmp_0);
-    if (r0) { step = 5; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level3", s.tmp_0);
-    if (r0) { step = 6; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level4", s.tmp_0);
-    if (r0) { step = 7; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level4", s.tmp_0);
-    if (r0) { step = 8; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level5", s.tmp_0);
-    if (r0) { step = 9; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level5", s.tmp_0);
-    if (r0) { step = 10; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level6", s.tmp_0);
-    if (r0) { step = 11; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level6", s.tmp_0);
-    if (r0) { step = 12; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level7", s.tmp_0);
-    if (r0) { step = 13; continue; }
-    r0 = pxsim_pxtcore.switch_eq("level7", s.tmp_0);
-    if (r0) { step = 14; continue; }
     r0 = s.tmp_0;
-    { step = 15; continue; }
+    { step = 3; continue; }
   case 1:
   case 2:
     r0 = pxsim_Array__mk();
     s.tmp_2 = r0;
-    r0 = pxsim_Array__push(s.tmp_2, globals.transparency16___50531);
+    r0 = pxsim_Array__push(s.tmp_2, globals.transparency16___69075);
     r0 = pxsim_Array__push(s.tmp_2, globals.tileGrass2___49811);
     s.tmp_3 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_3.arg0 = _hex54255;
-    r0 = pxsim.image.ofBuffer(_hex54257);
+    s.tmp_3.arg0 = _hex69086;
+    r0 = pxsim.image.ofBuffer(_hex69088);
     s.tmp_3.arg1 = r0;
     s.tmp_3.arg2 = s.tmp_2;
     s.tmp_3.arg3 = 4;
-    s.callLocIdx = 128; s.pc = 18; return s.tmp_3;
-  case 18:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 3:
-  case 4:
-    r0 = pxsim_Array__mk();
-    s.tmp_4 = r0;
-    r0 = pxsim_Array__push(s.tmp_4, globals.transparency16___50531);
-    s.tmp_5 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_5.arg0 = _hex54264;
-    r0 = pxsim.image.ofBuffer(_hex54266);
-    s.tmp_5.arg1 = r0;
-    s.tmp_5.arg2 = s.tmp_4;
-    s.tmp_5.arg3 = 4;
-    s.callLocIdx = 129; s.pc = 19; return s.tmp_5;
-  case 19:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 5:
+    s.callLocIdx = 128; s.pc = 6; return s.tmp_3;
   case 6:
-    r0 = pxsim_Array__mk();
-    s.tmp_6 = r0;
-    r0 = pxsim_Array__push(s.tmp_6, globals.transparency16___50531);
-    r0 = pxsim_Array__push(s.tmp_6, globals.tileGrass2___49811);
-    s.tmp_7 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_7.arg0 = _hex54272;
-    r0 = pxsim.image.ofBuffer(_hex54274);
-    s.tmp_7.arg1 = r0;
-    s.tmp_7.arg2 = s.tmp_6;
-    s.tmp_7.arg3 = 4;
-    s.callLocIdx = 130; s.pc = 20; return s.tmp_7;
-  case 20:
     r0 = s.retval;
-    { step = 16; continue; }
-  case 7:
-  case 8:
-    r0 = pxsim_Array__mk();
-    s.tmp_8 = r0;
-    r0 = pxsim_Array__push(s.tmp_8, globals.transparency16___50531);
-    s.tmp_9 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_9.arg0 = _hex54281;
-    r0 = pxsim.image.ofBuffer(_hex54283);
-    s.tmp_9.arg1 = r0;
-    s.tmp_9.arg2 = s.tmp_8;
-    s.tmp_9.arg3 = 4;
-    s.callLocIdx = 131; s.pc = 21; return s.tmp_9;
-  case 21:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 9:
-  case 10:
-    r0 = pxsim_Array__mk();
-    s.tmp_10 = r0;
-    r0 = pxsim_Array__push(s.tmp_10, globals.transparency16___50531);
-    r0 = pxsim_Array__push(s.tmp_10, globals.tileGrass2___49811);
-    s.tmp_11 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_11.arg0 = _hex54289;
-    r0 = pxsim.image.ofBuffer(_hex54291);
-    s.tmp_11.arg1 = r0;
-    s.tmp_11.arg2 = s.tmp_10;
-    s.tmp_11.arg3 = 4;
-    s.callLocIdx = 132; s.pc = 22; return s.tmp_11;
-  case 22:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 11:
-  case 12:
-    r0 = pxsim_Array__mk();
-    s.tmp_12 = r0;
-    r0 = pxsim_Array__push(s.tmp_12, globals.transparency16___50531);
-    s.tmp_13 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_13.arg0 = _hex54298;
-    r0 = pxsim.image.ofBuffer(_hex54300);
-    s.tmp_13.arg1 = r0;
-    s.tmp_13.arg2 = s.tmp_12;
-    s.tmp_13.arg3 = 4;
-    s.callLocIdx = 133; s.pc = 23; return s.tmp_13;
-  case 23:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 13:
-  case 14:
-    r0 = pxsim_Array__mk();
-    s.tmp_14 = r0;
-    r0 = pxsim_Array__push(s.tmp_14, globals.transparency16___50531);
-    r0 = pxsim_Array__push(s.tmp_14, globals.tileGrass2___49811);
-    s.tmp_15 = tiles_createTilemap__P48906_mk(s);
-    s.tmp_15.arg0 = _hex54306;
-    r0 = pxsim.image.ofBuffer(_hex54308);
-    s.tmp_15.arg1 = r0;
-    s.tmp_15.arg2 = s.tmp_14;
-    s.tmp_15.arg3 = 4;
-    s.callLocIdx = 134; s.pc = 24; return s.tmp_15;
-  case 24:
-    r0 = s.retval;
-    { step = 16; continue; }
-  case 15:
+    { step = 4; continue; }
+  case 3:
     r0 = null;
-  case 16:
+  case 4:
     return leave(s, r0)
   default: oops()
 } } }
-myTiles_inline__P54248.info = {"start":209,"length":8531,"line":5,"column":40,"endLine":142,"endColumn":5,"fileName":"tilemap.g.ts","functionName":"inline","argumentNames":["name"]}
+myTiles_inline__P69079.info = {"start":209,"length":1319,"line":5,"column":40,"endLine":28,"endColumn":5,"fileName":"tilemap.g.ts","functionName":"inline","argumentNames":["name"]}
 
-function myTiles_inline__P54248_mk(s) {
+function myTiles_inline__P69079_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: myTiles_inline__P54248, depth: s.depth + 1,
+        parent: s, fn: myTiles_inline__P69079, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  tmp_4: undefined,
-  tmp_5: undefined,
-  tmp_6: undefined,
-  tmp_7: undefined,
-  tmp_8: undefined,
-  tmp_9: undefined,
-  tmp_10: undefined,
-  tmp_11: undefined,
-  tmp_12: undefined,
-  tmp_13: undefined,
-  tmp_14: undefined,
-  tmp_15: undefined,
   arg0: undefined,
 } }
 
-const _hex54255 = pxsim.BufferMethods.createBufferFromHex("1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101")
-const _hex54257 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54264 = pxsim.BufferMethods.createBufferFromHex("1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54266 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54272 = pxsim.BufferMethods.createBufferFromHex("1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101")
-const _hex54274 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54281 = pxsim.BufferMethods.createBufferFromHex("1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54283 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54289 = pxsim.BufferMethods.createBufferFromHex("1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101")
-const _hex54291 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54298 = pxsim.BufferMethods.createBufferFromHex("1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54300 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex54306 = pxsim.BufferMethods.createBufferFromHex("1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101")
-const _hex54308 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex69086 = pxsim.BufferMethods.createBufferFromHex("1000100001010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101")
+const _hex69088 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
 
-function myTiles_inline__P54315(s) {
+function myTiles_inline__P69095(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1830,7 +1689,7 @@ switch (step) {
     }
     s.tmp_1 = helpers_stringTrim__P46266_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    s.callLocIdx = 136; s.pc = 4; return s.tmp_1;
+    s.callLocIdx = 130; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
     s.tmp_0 = r0;
@@ -1839,7 +1698,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 2; continue; }
   case 1:
-    r0 = globals.transparency16___50531;
+    r0 = globals.transparency16___69075;
     { step = 3; continue; }
   case 2:
     r0 = null;
@@ -1847,12 +1706,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-myTiles_inline__P54315.info = {"start":8780,"length":161,"line":144,"column":37,"endLine":149,"endColumn":5,"fileName":"tilemap.g.ts","functionName":"inline","argumentNames":["name"]}
+myTiles_inline__P69095.info = {"start":1568,"length":161,"line":30,"column":37,"endLine":35,"endColumn":5,"fileName":"tilemap.g.ts","functionName":"inline","argumentNames":["name"]}
 
-function myTiles_inline__P54315_mk(s) {
+function myTiles_inline__P69095_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: myTiles_inline__P54315, depth: s.depth + 1,
+        parent: s, fn: myTiles_inline__P69095, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1863,7 +1722,7 @@ function myTiles_inline__P54315_mk(s) {
 
 
 
-function inline__P54364(s) {
+function inline__P77024(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1873,10 +1732,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = lightsource_FlashlightLightSource_direction__P67662_mk(s);
-    s.tmp_2 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_2.arg0 = globals.s___50532;
-    s.callLocIdx = 148; s.pc = 2; return s.tmp_2;
+    s.tmp_0 = lightsource_FlashlightLightSource_direction__P74839_mk(s);
+    s.tmp_2 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_2.arg0 = globals.s___76980;
+    s.callLocIdx = 142; s.pc = 2; return s.tmp_2;
   case 2:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -1885,19 +1744,19 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 - 10);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 150; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 144; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P54364.info = {"start":996,"length":254,"line":29,"column":52,"endLine":37,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
+inline__P77024.info = {"start":1006,"length":254,"line":29,"column":52,"endLine":37,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P54364_mk(s) {
+function inline__P77024_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P54364, depth: s.depth + 1,
+        parent: s, fn: inline__P77024, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1909,7 +1768,7 @@ function inline__P54364_mk(s) {
 
 
 
-function inline__P54373(s) {
+function inline__P77033(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1919,11 +1778,11 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.p___54380 = undefined;
-    s.tmp_0 = lightsource_FlashlightLightSource_direction__P67662_mk(s);
-    s.tmp_2 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_2.arg0 = globals.s___50532;
-    s.callLocIdx = 152; s.pc = 2; return s.tmp_2;
+    s.p___77040 = undefined;
+    s.tmp_0 = lightsource_FlashlightLightSource_direction__P74839_mk(s);
+    s.tmp_2 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_2.arg0 = globals.s___76980;
+    s.callLocIdx = 146; s.pc = 2; return s.tmp_2;
   case 2:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -1932,51 +1791,51 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + 10);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 154; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 148; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = sprites_createProjectileFromSprite__P48425_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex54384);
+    r0 = pxsim.image.ofBuffer(_hex77044);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.s___50532;
+    s.tmp_0.arg1 = globals.s___76980;
     s.tmp_0.arg2 = -50;
     s.tmp_0.arg3 = -50;
-    s.callLocIdx = 155; s.pc = 3; return s.tmp_0;
+    s.callLocIdx = 149; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.p___54380 = (r0);
-    s.tmp_0 = multilights_addLightSource__P67780_mk(s);
-    s.tmp_0.arg0 = s.p___54380;
+    s.p___77040 = (r0);
+    s.tmp_0 = multilights_addLightSource__P74957_mk(s);
+    s.tmp_0.arg0 = s.p___77040;
     s.tmp_0.arg1 = 2;
     s.tmp_0.arg2 = 1;
     s.tmp_0.arg3 = 2.5;
-    s.callLocIdx = 156; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 150; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P54373.info = {"start":1304,"length":1017,"line":38,"column":52,"endLine":65,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
+inline__P77033.info = {"start":1314,"length":1017,"line":38,"column":52,"endLine":65,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P54373_mk(s) {
+function inline__P77033_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P54373, depth: s.depth + 1,
+        parent: s, fn: inline__P77033, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  p___54380: undefined,
+  p___77040: undefined,
 } }
 
-const _hex54384 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex77044 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
 
-function inline__P54400(s) {
+function inline__P77060(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1988,79 +1847,79 @@ switch (step) {
 
     s.tmp_0 = pause__P46556_mk(s);
     s.tmp_0.arg0 = 1000;
-    s.callLocIdx = 162; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 156; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = lightsource_FlashlightLightSource_darkness__P67667_mk(s);
-    s.tmp_1 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_1.arg0 = globals.s___50532;
-    s.callLocIdx = 163; s.pc = 3; return s.tmp_1;
+    s.tmp_0 = lightsource_FlashlightLightSource_darkness__P74844_mk(s);
+    s.tmp_1 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_1.arg0 = globals.s___76980;
+    s.callLocIdx = 157; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     r0 = pxsim.Math_.randomRange(0, 5);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 164; s.pc = 2; return s.tmp_0;
+    s.callLocIdx = 158; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.tmp_0 = lightsource_FlashlightLightSource_lightRange__P67661_mk(s);
-    s.tmp_1 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_1.arg0 = globals.s___50532;
-    s.callLocIdx = 165; s.pc = 5; return s.tmp_1;
+    s.tmp_0 = lightsource_FlashlightLightSource_lightRange__P74838_mk(s);
+    s.tmp_1 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_1.arg0 = globals.s___76980;
+    s.callLocIdx = 159; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     r0 = pxsim.Math_.randomRange(0, 100);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 166; s.pc = 4; return s.tmp_0;
+    s.callLocIdx = 160; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = lightsource_CircleLightSource_centerRadius__P67713_mk(s);
-    s.tmp_1 = multilights_circleLightSourceAttachedTo__P67818_mk(s);
-    s.tmp_1.arg0 = globals.s___50532;
-    s.callLocIdx = 167; s.pc = 7; return s.tmp_1;
+    s.tmp_0 = lightsource_CircleLightSource_centerRadius__P74890_mk(s);
+    s.tmp_1 = multilights_circleLightSourceAttachedTo__P74995_mk(s);
+    s.tmp_1.arg0 = globals.s___76980;
+    s.callLocIdx = 161; s.pc = 7; return s.tmp_1;
   case 7:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     r0 = pxsim.Math_.randomRange(0, 15);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 168; s.pc = 6; return s.tmp_0;
+    s.callLocIdx = 162; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
-    s.tmp_0 = lightsource_CircleLightSource_bandWidth__P67708_mk(s);
-    s.tmp_1 = multilights_circleLightSourceAttachedTo__P67818_mk(s);
-    s.tmp_1.arg0 = globals.s___50532;
-    s.callLocIdx = 169; s.pc = 9; return s.tmp_1;
+    s.tmp_0 = lightsource_CircleLightSource_bandWidth__P74885_mk(s);
+    s.tmp_1 = multilights_circleLightSourceAttachedTo__P74995_mk(s);
+    s.tmp_1.arg0 = globals.s___76980;
+    s.callLocIdx = 163; s.pc = 9; return s.tmp_1;
   case 9:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     r0 = pxsim.Math_.randomRange(0, 4);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 170; s.pc = 8; return s.tmp_0;
+    s.callLocIdx = 164; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.tmp_0 = lightsource_FlashlightLightSource_angleRange__P67665_mk(s);
-    s.tmp_1 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_1.arg0 = globals.s___50532;
-    s.callLocIdx = 171; s.pc = 11; return s.tmp_1;
+    s.tmp_0 = lightsource_FlashlightLightSource_angleRange__P74842_mk(s);
+    s.tmp_1 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_1.arg0 = globals.s___76980;
+    s.callLocIdx = 165; s.pc = 11; return s.tmp_1;
   case 11:
     r0 = s.retval;
     s.tmp_0.arg0 = r0;
     r0 = pxsim.Math_.randomRange(10, 90);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 172; s.pc = 10; return s.tmp_0;
+    s.callLocIdx = 166; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P54400.info = {"start":2638,"length":401,"line":80,"column":8,"endLine":87,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
+inline__P77060.info = {"start":2648,"length":401,"line":80,"column":8,"endLine":87,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P54400_mk(s) {
+function inline__P77060_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P54400, depth: s.depth + 1,
+        parent: s, fn: inline__P77060, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2070,7 +1929,7 @@ function inline__P54400_mk(s) {
 
 
 
-function inline__P54428(s) {
+function inline__P77088(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2080,10 +1939,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = lightsource_FlashlightLightSource_direction__P67662_mk(s);
-    s.tmp_2 = multilights_flashlightSourceAttachedTo__P67813_mk(s);
-    s.tmp_2.arg0 = globals.s___50532;
-    s.callLocIdx = 174; s.pc = 2; return s.tmp_2;
+    s.tmp_0 = lightsource_FlashlightLightSource_direction__P74839_mk(s);
+    s.tmp_2 = multilights_flashlightSourceAttachedTo__P74990_mk(s);
+    s.tmp_2.arg0 = globals.s___76980;
+    s.callLocIdx = 168; s.pc = 2; return s.tmp_2;
   case 2:
     r0 = s.retval;
     s.tmp_1 = r0;
@@ -2092,19 +1951,19 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = (s.tmp_3 + 1);
     s.tmp_0.arg1 = r0;
-    s.callLocIdx = 176; s.pc = 1; return s.tmp_0;
+    s.callLocIdx = 170; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P54428.info = {"start":3050,"length":76,"line":89,"column":8,"endLine":91,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
+inline__P77088.info = {"start":3060,"length":76,"line":89,"column":8,"endLine":91,"endColumn":1,"fileName":"test.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P54428_mk(s) {
+function inline__P77088_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P54428, depth: s.depth + 1,
+        parent: s, fn: inline__P77088, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2116,7 +1975,7 @@ function inline__P54428_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_angleRange__P67665(s) {
+function lightsource_FlashlightLightSource_angleRange__P74842(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2132,7 +1991,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = (s.arg1 / 2);
     s.tmp_1 = r0;
@@ -2141,12 +2000,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_angleRange__P67665.info = {"start":12534,"length":94,"line":326,"column":8,"endLine":328,"endColumn":9,"fileName":"Lanterns.ts","functionName":"angleRange","argumentNames":["this","angleRange"]}
+lightsource_FlashlightLightSource_angleRange__P74842.info = {"start":12537,"length":94,"line":326,"column":8,"endLine":328,"endColumn":9,"fileName":"Lanterns.ts","functionName":"angleRange","argumentNames":["this","angleRange"]}
 
-function lightsource_FlashlightLightSource_angleRange__P67665_mk(s) {
+function lightsource_FlashlightLightSource_angleRange__P74842_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_angleRange__P67665, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_angleRange__P74842, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2158,7 +2017,7 @@ function lightsource_FlashlightLightSource_angleRange__P67665_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_angleRange__P67664(s) {
+function lightsource_FlashlightLightSource_angleRange__P74841(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2173,18 +2032,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = s.arg0.fields["_angleRange"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_angleRange__P67664.info = {"start":12458,"length":66,"line":323,"column":8,"endLine":325,"endColumn":9,"fileName":"Lanterns.ts","functionName":"angleRange","argumentNames":["this"]}
-lightsource_FlashlightLightSource_angleRange__P67664.isGetter = true;
+lightsource_FlashlightLightSource_angleRange__P74841.info = {"start":12461,"length":66,"line":323,"column":8,"endLine":325,"endColumn":9,"fileName":"Lanterns.ts","functionName":"angleRange","argumentNames":["this"]}
+lightsource_FlashlightLightSource_angleRange__P74841.isGetter = true;
 
-function lightsource_FlashlightLightSource_angleRange__P67664_mk(s) {
+function lightsource_FlashlightLightSource_angleRange__P74841_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_angleRange__P67664, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_angleRange__P74841, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -2193,7 +2052,7 @@ function lightsource_FlashlightLightSource_angleRange__P67664_mk(s) {
 
 
 
-function lightsource_CircleLightSource_bandWidth__P67708(s) {
+function lightsource_CircleLightSource_bandWidth__P74885(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2209,9 +2068,9 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_bandWidth"] = (s.arg1);
-    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P67714_mk(s);
+    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P74891_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 113; s.pc = 1; return s.tmp_0;
   case 1:
@@ -2220,12 +2079,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_bandWidth__P67708.info = {"start":18158,"length":120,"line":476,"column":8,"endLine":479,"endColumn":9,"fileName":"Lanterns.ts","functionName":"bandWidth","argumentNames":["this","bandWidth"]}
+lightsource_CircleLightSource_bandWidth__P74885.info = {"start":18157,"length":120,"line":476,"column":8,"endLine":479,"endColumn":9,"fileName":"Lanterns.ts","functionName":"bandWidth","argumentNames":["this","bandWidth"]}
 
-function lightsource_CircleLightSource_bandWidth__P67708_mk(s) {
+function lightsource_CircleLightSource_bandWidth__P74885_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_bandWidth__P67708, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_bandWidth__P74885, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2236,7 +2095,7 @@ function lightsource_CircleLightSource_bandWidth__P67708_mk(s) {
 
 
 
-function lightsource_CircleLightSource_prepareOffset__P67714(s) {
+function lightsource_CircleLightSource_prepareOffset__P74891(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2246,17 +2105,17 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.halfh___68280 = undefined;
-    s.x___68302 = undefined;
-    s.band___68303 = undefined;
-    s.y2___68304 = undefined;
-    s.y___68305 = undefined;
+    s.halfh___75457 = undefined;
+    s.x___75479 = undefined;
+    s.band___75480 = undefined;
+    s.y2___75481 = undefined;
+    s.y___75482 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     r0 = s.arg0.fields["_centerRadius"];
     s.tmp_0 = r0;
     r0 = s.arg0.fields["rings"];
@@ -2266,30 +2125,30 @@ switch (step) {
     r0 = (s.tmp_2 * s.tmp_3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    s.halfh___68280 = (r0);
+    s.halfh___75457 = (r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.arg0.fields["rings"];
     s.tmp_4 = r0;
     r0 = (s.tmp_4 + 1);
     s.tmp_3 = r0;
-    r0 = (s.tmp_3 * s.halfh___68280);
+    r0 = (s.tmp_3 * s.halfh___75457);
     s.tmp_2 = r0;
-    r0 = pxsim.pins.createBuffer(s.tmp_2);
+    r0 = pxsim.control.createBuffer(s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["offsetTable"] = (s.tmp_1);
-    s.y___68305 = (0);
+    s.y___75482 = (0);
   case 1:
-    r0 = (s.y___68305 < s.halfh___68280);
+    r0 = (s.y___75482 < s.halfh___75457);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim.Math_.pow(s.y___68305, 2);
-    s.y2___68304 = (r0);
-    s.band___68303 = (0);
+    r0 = pxsim.Math_.pow(s.y___75482, 2);
+    s.y2___75481 = (r0);
+    s.band___75480 = (0);
   case 2:
     r0 = s.arg0.fields["rings"];
     s.tmp_1 = r0;
-    r0 = (s.band___68303 < s.tmp_1);
+    r0 = (s.band___75480 < s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
@@ -2297,7 +2156,7 @@ switch (step) {
     s.tmp_6 = r0;
     r0 = s.arg0.fields["_bandWidth"];
     s.tmp_8 = r0;
-    r0 = (s.band___68303 + 1);
+    r0 = (s.band___75480 + 1);
     s.tmp_9 = r0;
     r0 = (s.tmp_8 * s.tmp_9);
     s.tmp_7 = r0;
@@ -2305,41 +2164,41 @@ switch (step) {
     s.tmp_5 = r0;
     r0 = pxsim.Math_.pow(s.tmp_5, 2);
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 - s.y2___68304);
+    r0 = (s.tmp_4 - s.y2___75481);
     s.tmp_3 = r0;
     r0 = pxsim.Math_.sqrt(s.tmp_3);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 | 0);
-    s.x___68302 = (r0);
+    s.x___75479 = (r0);
     r0 = s.arg0.fields["offsetTable"];
     s.tmp_0 = r0;
     r0 = s.arg0.fields["rings"];
     s.tmp_3 = r0;
-    r0 = (s.y___68305 * s.tmp_3);
+    r0 = (s.y___75482 * s.tmp_3);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 + s.band___68303);
+    r0 = (s.tmp_2 + s.band___75480);
     s.tmp_1 = r0;
-    r0 = pxsim.BufferMethods.setByte(s.tmp_0, s.tmp_1, s.x___68302);
-    r0 = (s.band___68303 + 1);
-    s.band___68303 = (r0);
+    r0 = pxsim.BufferMethods.setByte(s.tmp_0, s.tmp_1, s.x___75479);
+    r0 = (s.band___75480 + 1);
+    s.band___75480 = (r0);
     { step = 2; continue; }
   case 3:
-    r0 = (s.y___68305 + 1);
-    s.y___68305 = (r0);
+    r0 = (s.y___75482 + 1);
+    s.y___75482 = (r0);
     { step = 1; continue; }
   case 4:
-    r0 = (s.arg0).fields["width"] = (s.halfh___68280);
-    r0 = (s.arg0).fields["height"] = (s.halfh___68280);
+    r0 = (s.arg0).fields["width"] = (s.halfh___75457);
+    r0 = (s.arg0).fields["height"] = (s.halfh___75457);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_prepareOffset__P67714.info = {"start":18996,"length":983,"line":507,"column":8,"endLine":527,"endColumn":9,"fileName":"Lanterns.ts","functionName":"prepareOffset","argumentNames":["this"]}
+lightsource_CircleLightSource_prepareOffset__P74891.info = {"start":18995,"length":979,"line":507,"column":8,"endLine":527,"endColumn":9,"fileName":"Lanterns.ts","functionName":"prepareOffset","argumentNames":["this"]}
 
-function lightsource_CircleLightSource_prepareOffset__P67714_mk(s) {
+function lightsource_CircleLightSource_prepareOffset__P74891_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_prepareOffset__P67714, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_prepareOffset__P74891, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2351,11 +2210,11 @@ function lightsource_CircleLightSource_prepareOffset__P67714_mk(s) {
   tmp_7: undefined,
   tmp_8: undefined,
   tmp_9: undefined,
-  halfh___68280: undefined,
-  x___68302: undefined,
-  band___68303: undefined,
-  y2___68304: undefined,
-  y___68305: undefined,
+  halfh___75457: undefined,
+  x___75479: undefined,
+  band___75480: undefined,
+  y2___75481: undefined,
+  y___75482: undefined,
   arg0: undefined,
 } }
 
@@ -2363,7 +2222,7 @@ function lightsource_CircleLightSource_prepareOffset__P67714_mk(s) {
 
 
 
-function multilights_circleLightSourceAttachedTo__P67818(s) {
+function multilights_circleLightSourceAttachedTo__P74995(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2377,7 +2236,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 91; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
@@ -2390,12 +2249,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_circleLightSourceAttachedTo__P67818.info = {"start":8901,"length":175,"line":218,"column":4,"endLine":220,"endColumn":5,"fileName":"Lanterns.ts","functionName":"circleLightSourceAttachedTo","argumentNames":["sprite"]}
+multilights_circleLightSourceAttachedTo__P74995.info = {"start":8904,"length":175,"line":218,"column":4,"endLine":220,"endColumn":5,"fileName":"Lanterns.ts","functionName":"circleLightSourceAttachedTo","argumentNames":["sprite"]}
 
-function multilights_circleLightSourceAttachedTo__P67818_mk(s) {
+function multilights_circleLightSourceAttachedTo__P74995_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_circleLightSourceAttachedTo__P67818, depth: s.depth + 1,
+        parent: s, fn: multilights_circleLightSourceAttachedTo__P74995, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2408,7 +2267,7 @@ function multilights_circleLightSourceAttachedTo__P67818_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_getInstance__P67418(s) {
+function multilights_MultiLightScreenEffect_getInstance__P74595(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2418,30 +2277,30 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.multilights_MultiLightScreenEffect_instance___67429 == null);
+    r0 = (globals.multilights_MultiLightScreenEffect_instance___74606 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(multilights_MultiLightScreenEffect__C67417_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(multilights_MultiLightScreenEffect__C74594_VT);
     s.tmp_1 = r0;
-    s.tmp_2 = multilights_MultiLightScreenEffect_constructor__P67436_mk(s);
+    s.tmp_2 = multilights_MultiLightScreenEffect_constructor__P74613_mk(s);
     s.tmp_2.arg0 = s.tmp_1;
     s.callLocIdx = 63; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    globals.multilights_MultiLightScreenEffect_instance___67429 = (s.tmp_1);
+    globals.multilights_MultiLightScreenEffect_instance___74606 = (s.tmp_1);
   case 1:
   case 2:
-    r0 = globals.multilights_MultiLightScreenEffect_instance___67429;
+    r0 = globals.multilights_MultiLightScreenEffect_instance___74606;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_getInstance__P67418.info = {"start":1123,"length":271,"line":24,"column":8,"endLine":29,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getInstance","argumentNames":[]}
+multilights_MultiLightScreenEffect_getInstance__P74595.info = {"start":1130,"length":271,"line":24,"column":8,"endLine":29,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getInstance","argumentNames":[]}
 
-function multilights_MultiLightScreenEffect_getInstance__P67418_mk(s) {
+function multilights_MultiLightScreenEffect_getInstance__P74595_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_getInstance__P67418, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_getInstance__P74595, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2452,7 +2311,7 @@ function multilights_MultiLightScreenEffect_getInstance__P67418_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_constructor__P67436(s) {
+function multilights_MultiLightScreenEffect_constructor__P74613(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2462,15 +2321,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.band___67450 = undefined;
-    s.buffer___67454 = undefined;
-    s.i___67458 = undefined;
+    s.band___74627 = undefined;
+    s.buffer___74631 = undefined;
+    s.i___74635 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = pxsim_pxtrt.mkMap();
     s.tmp_1 = r0;
@@ -2490,50 +2349,50 @@ switch (step) {
     r0 = pxsim_Array__mk();
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["bandPalettes"] = (s.tmp_1);
-    s.band___67450 = (0);
+    s.band___74627 = (0);
   case 1:
-    r0 = (s.band___67450 < 6);
+    r0 = (s.band___74627 < 6);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
     r0 = pxsim.pins.createBuffer(16);
-    s.buffer___67454 = (r0);
-    s.i___67458 = (0);
+    s.buffer___74631 = (r0);
+    s.i___74635 = (0);
   case 2:
-    r0 = (s.i___67458 < 16);
+    r0 = (s.i___74635 < 16);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_1 = r0 = s.buffer___67454;
-    s.tmp_2 = r0 = s.i___67458;
-    s.tmp_4 = r0 = globals.palette_ramps___67414;
-    s.tmp_5 = r0 = s.i___67458;
-    r0 = (s.band___67450 + 0);
+    s.tmp_1 = r0 = s.buffer___74631;
+    s.tmp_2 = r0 = s.i___74635;
+    s.tmp_4 = r0 = globals.palette_ramps___74591;
+    s.tmp_5 = r0 = s.i___74635;
+    r0 = (s.band___74627 + 0);
     s.tmp_6 = r0;
     r0 = pxsim_ImageMethods.getPixel(s.tmp_4, s.tmp_5, s.tmp_6);
     s.tmp_3 = r0;
     r0 = pxsim.BufferMethods.setByte(s.tmp_1, s.tmp_2, s.tmp_3);
-    r0 = (s.i___67458 + 1);
-    s.i___67458 = (r0);
+    r0 = (s.i___74635 + 1);
+    s.i___74635 = (r0);
     { step = 2; continue; }
   case 3:
     r0 = s.arg0.fields["bandPalettes"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.buffer___67454);
-    r0 = (s.band___67450 + 1);
-    s.band___67450 = (r0);
+    r0 = pxsim_Array__push(s.tmp_0, s.buffer___74631);
+    r0 = (s.band___74627 + 1);
+    s.band___74627 = (r0);
     { step = 1; continue; }
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_constructor__P67436.info = {"start":1406,"length":404,"line":31,"column":8,"endLine":41,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this"]}
+multilights_MultiLightScreenEffect_constructor__P74613.info = {"start":1413,"length":404,"line":31,"column":8,"endLine":41,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this"]}
 
-function multilights_MultiLightScreenEffect_constructor__P67436_mk(s) {
+function multilights_MultiLightScreenEffect_constructor__P74613_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_constructor__P67436, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_constructor__P74613, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2542,9 +2401,9 @@ function multilights_MultiLightScreenEffect_constructor__P67436_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  band___67450: undefined,
-  buffer___67454: undefined,
-  i___67458: undefined,
+  band___74627: undefined,
+  buffer___74631: undefined,
+  i___74635: undefined,
   arg0: undefined,
 } }
 
@@ -2552,7 +2411,7 @@ function multilights_MultiLightScreenEffect_constructor__P67436_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_getCircleLight__P67424(s) {
+function multilights_MultiLightScreenEffect_getCircleLight__P74601(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2568,7 +2427,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = s.arg0.fields["lightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
@@ -2577,12 +2436,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_getCircleLight__P67424.info = {"start":3154,"length":127,"line":78,"column":8,"endLine":80,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getCircleLight","argumentNames":["this","sprite"]}
+multilights_MultiLightScreenEffect_getCircleLight__P74601.info = {"start":3161,"length":127,"line":78,"column":8,"endLine":80,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getCircleLight","argumentNames":["this","sprite"]}
 
-function multilights_MultiLightScreenEffect_getCircleLight__P67424_mk(s) {
+function multilights_MultiLightScreenEffect_getCircleLight__P74601_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_getCircleLight__P67424, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_getCircleLight__P74601, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2594,7 +2453,7 @@ function multilights_MultiLightScreenEffect_getCircleLight__P67424_mk(s) {
 
 
 
-function lightsource_CircleLightSource_centerRadius__P67713(s) {
+function lightsource_CircleLightSource_centerRadius__P74890(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2610,9 +2469,9 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_centerRadius"] = (s.arg1);
-    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P67714_mk(s);
+    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P74891_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 114; s.pc = 1; return s.tmp_0;
   case 1:
@@ -2621,12 +2480,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_centerRadius__P67713.info = {"start":18852,"length":132,"line":502,"column":8,"endLine":505,"endColumn":9,"fileName":"Lanterns.ts","functionName":"centerRadius","argumentNames":["this","centerRadius"]}
+lightsource_CircleLightSource_centerRadius__P74890.info = {"start":18851,"length":132,"line":502,"column":8,"endLine":505,"endColumn":9,"fileName":"Lanterns.ts","functionName":"centerRadius","argumentNames":["this","centerRadius"]}
 
-function lightsource_CircleLightSource_centerRadius__P67713_mk(s) {
+function lightsource_CircleLightSource_centerRadius__P74890_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_centerRadius__P67713, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_centerRadius__P74890, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -2637,7 +2496,7 @@ function lightsource_CircleLightSource_centerRadius__P67713_mk(s) {
 
 
 
-function lightsource_CircleLightSource_centerRadius__P67712(s) {
+function lightsource_CircleLightSource_centerRadius__P74889(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2652,18 +2511,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     r0 = s.arg0.fields["_centerRadius"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_centerRadius__P67712.info = {"start":18770,"length":70,"line":498,"column":8,"endLine":500,"endColumn":9,"fileName":"Lanterns.ts","functionName":"centerRadius","argumentNames":["this"]}
-lightsource_CircleLightSource_centerRadius__P67712.isGetter = true;
+lightsource_CircleLightSource_centerRadius__P74889.info = {"start":18769,"length":70,"line":498,"column":8,"endLine":500,"endColumn":9,"fileName":"Lanterns.ts","functionName":"centerRadius","argumentNames":["this"]}
+lightsource_CircleLightSource_centerRadius__P74889.isGetter = true;
 
-function lightsource_CircleLightSource_centerRadius__P67712_mk(s) {
+function lightsource_CircleLightSource_centerRadius__P74889_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_centerRadius__P67712, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_centerRadius__P74889, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -2672,7 +2531,7 @@ function lightsource_CircleLightSource_centerRadius__P67712_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_lightRange__P67661(s) {
+function lightsource_FlashlightLightSource_lightRange__P74838(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2688,12 +2547,12 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = (s.arg1 % 360);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["_lightRange"] = (s.tmp_1);
-    s.tmp_0 = lightsource_FlashlightLightSource_prepareOffset__P67668_mk(s);
+    s.tmp_0 = lightsource_FlashlightLightSource_prepareOffset__P74845_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 94; s.pc = 1; return s.tmp_0;
   case 1:
@@ -2702,12 +2561,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_lightRange__P67661.info = {"start":11895,"length":130,"line":307,"column":8,"endLine":310,"endColumn":9,"fileName":"Lanterns.ts","functionName":"lightRange","argumentNames":["this","lightRange"]}
+lightsource_FlashlightLightSource_lightRange__P74838.info = {"start":11898,"length":130,"line":307,"column":8,"endLine":310,"endColumn":9,"fileName":"Lanterns.ts","functionName":"lightRange","argumentNames":["this","lightRange"]}
 
-function lightsource_FlashlightLightSource_lightRange__P67661_mk(s) {
+function lightsource_FlashlightLightSource_lightRange__P74838_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_lightRange__P67661, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_lightRange__P74838, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2719,7 +2578,7 @@ function lightsource_FlashlightLightSource_lightRange__P67661_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_prepareOffset__P67668(s) {
+function lightsource_FlashlightLightSource_prepareOffset__P74845(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2729,25 +2588,25 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.halfh___67972 = undefined;
-    s.x___67980 = undefined;
-    s.y2___67981 = undefined;
-    s.y___67982 = undefined;
+    s.halfh___75149 = undefined;
+    s.x___75157 = undefined;
+    s.y2___75158 = undefined;
+    s.y___75159 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = s.arg0.fields["_lightRange"];
-    s.halfh___67972 = (r0);
+    s.halfh___75149 = (r0);
     s.tmp_0 = r0 = s.arg0;
-    r0 = pxsim.pins.createBuffer(s.halfh___67972);
+    r0 = pxsim.control.createBuffer(s.halfh___75149);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["offsetTable"] = (s.tmp_1);
-    s.y___67982 = (0);
+    s.y___75159 = (0);
   case 1:
-    r0 = (s.y___67982 <= s.halfh___67972);
+    r0 = (s.y___75159 <= s.halfh___75149);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
@@ -2755,33 +2614,33 @@ switch (step) {
     s.tmp_4 = r0;
     r0 = pxsim.Math_.pow(s.tmp_4, 2);
     s.tmp_3 = r0;
-    r0 = pxsim.Math_.pow(s.y___67982, 2);
+    r0 = pxsim.Math_.pow(s.y___75159, 2);
     s.tmp_5 = r0;
     r0 = (s.tmp_3 - s.tmp_5);
     s.tmp_2 = r0;
     r0 = pxsim.Math_.sqrt(s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 | 0);
-    s.x___67980 = (r0);
+    s.x___75157 = (r0);
     r0 = s.arg0.fields["offsetTable"];
     s.tmp_0 = r0;
-    r0 = pxsim.BufferMethods.setByte(s.tmp_0, s.y___67982, s.x___67980);
-    r0 = (s.y___67982 + 1);
-    s.y___67982 = (r0);
+    r0 = pxsim.BufferMethods.setByte(s.tmp_0, s.y___75159, s.x___75157);
+    r0 = (s.y___75159 + 1);
+    s.y___75159 = (r0);
     { step = 1; continue; }
   case 2:
-    r0 = (s.arg0).fields["width"] = (s.halfh___67972);
-    r0 = (s.arg0).fields["height"] = (s.halfh___67972);
+    r0 = (s.arg0).fields["width"] = (s.halfh___75149);
+    r0 = (s.arg0).fields["height"] = (s.halfh___75149);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_prepareOffset__P67668.info = {"start":12928,"length":925,"line":340,"column":8,"endLine":359,"endColumn":9,"fileName":"Lanterns.ts","functionName":"prepareOffset","argumentNames":["this"]}
+lightsource_FlashlightLightSource_prepareOffset__P74845.info = {"start":12931,"length":921,"line":340,"column":8,"endLine":359,"endColumn":9,"fileName":"Lanterns.ts","functionName":"prepareOffset","argumentNames":["this"]}
 
-function lightsource_FlashlightLightSource_prepareOffset__P67668_mk(s) {
+function lightsource_FlashlightLightSource_prepareOffset__P74845_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_prepareOffset__P67668, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_prepareOffset__P74845, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2789,10 +2648,10 @@ function lightsource_FlashlightLightSource_prepareOffset__P67668_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  halfh___67972: undefined,
-  x___67980: undefined,
-  y2___67981: undefined,
-  y___67982: undefined,
+  halfh___75149: undefined,
+  x___75157: undefined,
+  y2___75158: undefined,
+  y___75159: undefined,
   arg0: undefined,
 } }
 
@@ -2800,7 +2659,7 @@ function lightsource_FlashlightLightSource_prepareOffset__P67668_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_lightRange__P67660(s) {
+function lightsource_FlashlightLightSource_lightRange__P74837(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2815,18 +2674,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = s.arg0.fields["_lightRange"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_lightRange__P67660.info = {"start":11819,"length":66,"line":304,"column":8,"endLine":306,"endColumn":9,"fileName":"Lanterns.ts","functionName":"lightRange","argumentNames":["this"]}
-lightsource_FlashlightLightSource_lightRange__P67660.isGetter = true;
+lightsource_FlashlightLightSource_lightRange__P74837.info = {"start":11822,"length":66,"line":304,"column":8,"endLine":306,"endColumn":9,"fileName":"Lanterns.ts","functionName":"lightRange","argumentNames":["this"]}
+lightsource_FlashlightLightSource_lightRange__P74837.isGetter = true;
 
-function lightsource_FlashlightLightSource_lightRange__P67660_mk(s) {
+function lightsource_FlashlightLightSource_lightRange__P74837_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_lightRange__P67660, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_lightRange__P74837, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -2835,7 +2694,7 @@ function lightsource_FlashlightLightSource_lightRange__P67660_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_darkness__P67667(s) {
+function lightsource_FlashlightLightSource_darkness__P74844(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2851,18 +2710,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_darkness"] = (s.arg1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_darkness__P67667.info = {"start":12832,"length":82,"line":335,"column":8,"endLine":337,"endColumn":9,"fileName":"Lanterns.ts","functionName":"darkness","argumentNames":["this","darkness"]}
+lightsource_FlashlightLightSource_darkness__P74844.info = {"start":12835,"length":82,"line":335,"column":8,"endLine":337,"endColumn":9,"fileName":"Lanterns.ts","functionName":"darkness","argumentNames":["this","darkness"]}
 
-function lightsource_FlashlightLightSource_darkness__P67667_mk(s) {
+function lightsource_FlashlightLightSource_darkness__P74844_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_darkness__P67667, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_darkness__P74844, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -2872,7 +2731,7 @@ function lightsource_FlashlightLightSource_darkness__P67667_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_darkness__P67666(s) {
+function lightsource_FlashlightLightSource_darkness__P74843(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2887,18 +2746,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = s.arg0.fields["_darkness"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_darkness__P67666.info = {"start":12760,"length":62,"line":332,"column":8,"endLine":334,"endColumn":9,"fileName":"Lanterns.ts","functionName":"darkness","argumentNames":["this"]}
-lightsource_FlashlightLightSource_darkness__P67666.isGetter = true;
+lightsource_FlashlightLightSource_darkness__P74843.info = {"start":12763,"length":62,"line":332,"column":8,"endLine":334,"endColumn":9,"fileName":"Lanterns.ts","functionName":"darkness","argumentNames":["this"]}
+lightsource_FlashlightLightSource_darkness__P74843.isGetter = true;
 
-function lightsource_FlashlightLightSource_darkness__P67666_mk(s) {
+function lightsource_FlashlightLightSource_darkness__P74843_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_darkness__P67666, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_darkness__P74843, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -3248,7 +3107,7 @@ function helpers_arrayForEach__P46252_mk(s) {
 
 
 
-function multilights_setShaderRamp__P67791(s) {
+function multilights_setShaderRamp__P74968(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3262,8 +3121,8 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = multilights_MultiLightScreenEffect_setColorRamp__P67428_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_setColorRamp__P74605_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 85; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -3276,12 +3135,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_setShaderRamp__P67791.info = {"start":7561,"length":116,"line":192,"column":4,"endLine":194,"endColumn":5,"fileName":"Lanterns.ts","functionName":"setShaderRamp","argumentNames":["ramp"]}
+multilights_setShaderRamp__P74968.info = {"start":7564,"length":116,"line":192,"column":4,"endLine":194,"endColumn":5,"fileName":"Lanterns.ts","functionName":"setShaderRamp","argumentNames":["ramp"]}
 
-function multilights_setShaderRamp__P67791_mk(s) {
+function multilights_setShaderRamp__P74968_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_setShaderRamp__P67791, depth: s.depth + 1,
+        parent: s, fn: multilights_setShaderRamp__P74968, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3292,7 +3151,7 @@ function multilights_setShaderRamp__P67791_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_setColorRamp__P67428(s) {
+function multilights_MultiLightScreenEffect_setColorRamp__P74605(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3302,64 +3161,64 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.band___67738 = undefined;
-    s.buffer___67742 = undefined;
-    s.i___67746 = undefined;
+    s.band___74915 = undefined;
+    s.buffer___74919 = undefined;
+    s.i___74923 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = pxsim_Array__mk();
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["bandPalettes"] = (s.tmp_1);
-    s.band___67738 = (0);
+    s.band___74915 = (0);
   case 1:
-    r0 = (s.band___67738 < 6);
+    r0 = (s.band___74915 < 6);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim.pins.createBuffer(16);
-    s.buffer___67742 = (r0);
-    s.i___67746 = (0);
+    r0 = pxsim.control.createBuffer(16);
+    s.buffer___74919 = (r0);
+    s.i___74923 = (0);
   case 2:
-    r0 = (s.i___67746 < 16);
+    r0 = (s.i___74923 < 16);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_1 = r0 = s.buffer___67742;
-    s.tmp_2 = r0 = s.i___67746;
+    s.tmp_1 = r0 = s.buffer___74919;
+    s.tmp_2 = r0 = s.i___74923;
     s.tmp_4 = r0 = s.arg1;
-    s.tmp_5 = r0 = s.i___67746;
-    r0 = (s.band___67738 + 0);
+    s.tmp_5 = r0 = s.i___74923;
+    r0 = (s.band___74915 + 0);
     s.tmp_6 = r0;
     r0 = pxsim_ImageMethods.getPixel(s.tmp_4, s.tmp_5, s.tmp_6);
     s.tmp_3 = r0;
     r0 = pxsim.BufferMethods.setByte(s.tmp_1, s.tmp_2, s.tmp_3);
-    r0 = (s.i___67746 + 1);
-    s.i___67746 = (r0);
+    r0 = (s.i___74923 + 1);
+    s.i___74923 = (r0);
     { step = 2; continue; }
   case 3:
     r0 = s.arg0.fields["bandPalettes"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.buffer___67742);
-    r0 = (s.band___67738 + 1);
-    s.band___67738 = (r0);
+    r0 = pxsim_Array__push(s.tmp_0, s.buffer___74919);
+    r0 = (s.band___74915 + 1);
+    s.band___74915 = (r0);
     { step = 1; continue; }
   case 4:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_setColorRamp__P67428.info = {"start":5981,"length":374,"line":150,"column":8,"endLine":159,"endColumn":9,"fileName":"Lanterns.ts","functionName":"setColorRamp","argumentNames":["this","ramp"]}
+multilights_MultiLightScreenEffect_setColorRamp__P74605.info = {"start":5988,"length":370,"line":150,"column":8,"endLine":159,"endColumn":9,"fileName":"Lanterns.ts","functionName":"setColorRamp","argumentNames":["this","ramp"]}
 
-function multilights_MultiLightScreenEffect_setColorRamp__P67428_mk(s) {
+function multilights_MultiLightScreenEffect_setColorRamp__P74605_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_setColorRamp__P67428, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_setColorRamp__P74605, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3368,9 +3227,9 @@ function multilights_MultiLightScreenEffect_setColorRamp__P67428_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  band___67738: undefined,
-  buffer___67742: undefined,
-  i___67746: undefined,
+  band___74915: undefined,
+  buffer___74919: undefined,
+  i___74923: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -6385,7 +6244,7 @@ function Sprite_x__P48498_mk(s) {
 
 
 
-function multilights_flashlightSourceAttachedTo__P67813(s) {
+function multilights_flashlightSourceAttachedTo__P74990(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6399,7 +6258,7 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 89; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
@@ -6412,12 +6271,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_flashlightSourceAttachedTo__P67813.info = {"start":8554,"length":177,"line":211,"column":4,"endLine":213,"endColumn":5,"fileName":"Lanterns.ts","functionName":"flashlightSourceAttachedTo","argumentNames":["sprite"]}
+multilights_flashlightSourceAttachedTo__P74990.info = {"start":8557,"length":177,"line":211,"column":4,"endLine":213,"endColumn":5,"fileName":"Lanterns.ts","functionName":"flashlightSourceAttachedTo","argumentNames":["sprite"]}
 
-function multilights_flashlightSourceAttachedTo__P67813_mk(s) {
+function multilights_flashlightSourceAttachedTo__P74990_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_flashlightSourceAttachedTo__P67813, depth: s.depth + 1,
+        parent: s, fn: multilights_flashlightSourceAttachedTo__P74990, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6430,7 +6289,7 @@ function multilights_flashlightSourceAttachedTo__P67813_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_getFlashlight__P67423(s) {
+function multilights_MultiLightScreenEffect_getFlashlight__P74600(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6446,7 +6305,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = s.arg0.fields["flashlightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
@@ -6455,12 +6314,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_getFlashlight__P67423.info = {"start":3044,"length":98,"line":74,"column":8,"endLine":76,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getFlashlight","argumentNames":["this","sprite"]}
+multilights_MultiLightScreenEffect_getFlashlight__P74600.info = {"start":3051,"length":98,"line":74,"column":8,"endLine":76,"endColumn":9,"fileName":"Lanterns.ts","functionName":"getFlashlight","argumentNames":["this","sprite"]}
 
-function multilights_MultiLightScreenEffect_getFlashlight__P67423_mk(s) {
+function multilights_MultiLightScreenEffect_getFlashlight__P74600_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_getFlashlight__P67423, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_getFlashlight__P74600, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6472,7 +6331,7 @@ function multilights_MultiLightScreenEffect_getFlashlight__P67423_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_direction__P67663(s) {
+function lightsource_FlashlightLightSource_direction__P74840(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6487,18 +6346,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = s.arg0.fields["_direction"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_direction__P67663.info = {"start":12260,"length":64,"line":317,"column":8,"endLine":319,"endColumn":9,"fileName":"Lanterns.ts","functionName":"direction","argumentNames":["this"]}
-lightsource_FlashlightLightSource_direction__P67663.isGetter = true;
+lightsource_FlashlightLightSource_direction__P74840.info = {"start":12263,"length":64,"line":317,"column":8,"endLine":319,"endColumn":9,"fileName":"Lanterns.ts","functionName":"direction","argumentNames":["this"]}
+lightsource_FlashlightLightSource_direction__P74840.isGetter = true;
 
-function lightsource_FlashlightLightSource_direction__P67663_mk(s) {
+function lightsource_FlashlightLightSource_direction__P74840_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_direction__P67663, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_direction__P74840, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -6507,7 +6366,7 @@ function lightsource_FlashlightLightSource_direction__P67663_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_direction__P67662(s) {
+function lightsource_FlashlightLightSource_direction__P74839(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6523,7 +6382,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = (s.arg1 % 360);
     s.tmp_1 = r0;
@@ -6532,12 +6391,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_direction__P67662.info = {"start":12158,"length":92,"line":314,"column":8,"endLine":316,"endColumn":9,"fileName":"Lanterns.ts","functionName":"direction","argumentNames":["this","direction"]}
+lightsource_FlashlightLightSource_direction__P74839.info = {"start":12161,"length":92,"line":314,"column":8,"endLine":316,"endColumn":9,"fileName":"Lanterns.ts","functionName":"direction","argumentNames":["this","direction"]}
 
-function lightsource_FlashlightLightSource_direction__P67662_mk(s) {
+function lightsource_FlashlightLightSource_direction__P74839_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_direction__P67662, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_direction__P74839, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7607,7 +7466,7 @@ function scene_Background_image__P48819_mk(s) {
 
 
 
-function multilights_toggleLighting__P67769(s) {
+function multilights_toggleLighting__P74946(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7623,8 +7482,8 @@ switch (step) {
     }
     r0 = pxsim_numops_toBoolDecr(s.arg0);
     if (!r0) { step = 1; continue; }
-    s.tmp_0 = multilights_MultiLightScreenEffect_startScreenEffect__P67425_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_startScreenEffect__P74602_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 77; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
@@ -7634,8 +7493,8 @@ switch (step) {
     r0 = s.retval;
     { step = 2; continue; }
   case 1:
-    s.tmp_0 = multilights_MultiLightScreenEffect_stopScreenEffect__P67419_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_stopScreenEffect__P74596_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 79; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
@@ -7648,12 +7507,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_toggleLighting__P67769.info = {"start":6384,"length":241,"line":163,"column":4,"endLine":170,"endColumn":5,"fileName":"Lanterns.ts","functionName":"toggleLighting","argumentNames":["on"]}
+multilights_toggleLighting__P74946.info = {"start":6387,"length":241,"line":163,"column":4,"endLine":170,"endColumn":5,"fileName":"Lanterns.ts","functionName":"toggleLighting","argumentNames":["on"]}
 
-function multilights_toggleLighting__P67769_mk(s) {
+function multilights_toggleLighting__P74946_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_toggleLighting__P67769, depth: s.depth + 1,
+        parent: s, fn: multilights_toggleLighting__P74946, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7664,7 +7523,7 @@ function multilights_toggleLighting__P67769_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_stopScreenEffect__P67419(s) {
+function multilights_MultiLightScreenEffect_stopScreenEffect__P74596(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7679,18 +7538,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = (s.arg0).fields["running"] = (false);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_stopScreenEffect__P67419.info = {"start":1822,"length":66,"line":43,"column":8,"endLine":45,"endColumn":9,"fileName":"Lanterns.ts","functionName":"stopScreenEffect","argumentNames":["this"]}
+multilights_MultiLightScreenEffect_stopScreenEffect__P74596.info = {"start":1829,"length":66,"line":43,"column":8,"endLine":45,"endColumn":9,"fileName":"Lanterns.ts","functionName":"stopScreenEffect","argumentNames":["this"]}
 
-function multilights_MultiLightScreenEffect_stopScreenEffect__P67419_mk(s) {
+function multilights_MultiLightScreenEffect_stopScreenEffect__P74596_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_stopScreenEffect__P67419, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_stopScreenEffect__P74596, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -7699,7 +7558,7 @@ function multilights_MultiLightScreenEffect_stopScreenEffect__P67419_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_startScreenEffect__P67425(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect__P74602(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7714,7 +7573,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = (s.arg0).fields["running"] = (true);
     r0 = s.arg0.fields["_init"];
     s.tmp_0 = r0;
@@ -7723,7 +7582,7 @@ switch (step) {
     { step = 3; continue; }
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_startScreenEffect_inline__P67585);
+    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_startScreenEffect_inline__P74762);
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_1, 0, s.arg0);
     s.tmp_2 = scene_createRenderable__P48949_mk(s);
@@ -7733,7 +7592,7 @@ switch (step) {
     s.callLocIdx = 69; s.pc = 4; return s.tmp_2;
   case 4:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630);
+    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_startScreenEffect_inline__P74807);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = game_addScenePopHandler__P49164_mk(s);
@@ -7747,12 +7606,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_startScreenEffect__P67425.info = {"start":3293,"length":1295,"line":82,"column":8,"endLine":118,"endColumn":9,"fileName":"Lanterns.ts","functionName":"startScreenEffect","argumentNames":["this"]}
+multilights_MultiLightScreenEffect_startScreenEffect__P74602.info = {"start":3300,"length":1295,"line":82,"column":8,"endLine":118,"endColumn":9,"fileName":"Lanterns.ts","functionName":"startScreenEffect","argumentNames":["this"]}
 
-function multilights_MultiLightScreenEffect_startScreenEffect__P67425_mk(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect__P74602_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect__P67425, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect__P74602, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7764,7 +7623,7 @@ function multilights_MultiLightScreenEffect_startScreenEffect__P67425_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_startScreenEffect_inline__P67585(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect_inline__P74762(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7774,15 +7633,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.lightMap___67589 = undefined;
-    s.key___67600 = undefined;
-    s.unnamed596___U2 = undefined;
-    s.unnamed597___U3 = undefined;
-    s.lightsource___67605 = undefined;
-    s.key___67614 = undefined;
-    s.unnamed598___U6 = undefined;
-    s.unnamed599___U7 = undefined;
-    s.lightsource___67619 = undefined;
+    s.lightMap___74766 = undefined;
+    s.key___74777 = undefined;
+    s.unnamed836___U2 = undefined;
+    s.unnamed837___U3 = undefined;
+    s.lightsource___74782 = undefined;
+    s.key___74791 = undefined;
+    s.unnamed838___U6 = undefined;
+    s.unnamed839___U7 = undefined;
+    s.lightsource___74796 = undefined;
     r0 = s.caps[0].fields["running"];
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
@@ -7799,29 +7658,29 @@ switch (step) {
     r0 = pxsim_ImageMethods.height(globals.screen___48176);
     s.tmp_4 = r0;
     r0 = pxsim.image.create(s.tmp_3, s.tmp_4);
-    s.lightMap___67589 = (r0);
-    r0 = pxsim_ImageMethods.fill(s.lightMap___67589, 5);
-    s.key___67600 = (undefined);
+    s.lightMap___74766 = (r0);
+    r0 = pxsim_ImageMethods.fill(s.lightMap___74766, 5);
+    s.key___74777 = (undefined);
     r0 = s.caps[0].fields["lightSourceMap"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.keysOf(s.tmp_0);
-    s.unnamed596___U2 = (r0);
-    s.unnamed597___U3 = (0);
+    s.unnamed836___U2 = (r0);
+    s.unnamed837___U3 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed597___U3;
-    r0 = pxsim_Array__length(s.unnamed596___U2);
+    s.tmp_0 = r0 = s.unnamed837___U3;
+    r0 = pxsim_Array__length(s.unnamed836___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed596___U2, s.unnamed597___U3);
-    s.key___67600 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed836___U2, s.unnamed837___U3);
+    s.key___74777 = (r0);
     r0 = s.caps[0].fields["lightSourceMap"];
     s.tmp_2 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.key___67600);
-    s.lightsource___67605 = (r0);
+    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.key___74777);
+    s.lightsource___74782 = (r0);
     s.tmp_0 = if_apply_2_mk(s);
-    s.tmp_0.arg0 = s.lightsource___67605;
-    s.tmp_0.arg1 = s.lightMap___67589;
+    s.tmp_0.arg0 = s.lightsource___74782;
+    s.tmp_0.arg1 = s.lightMap___74766;
     if (!s.tmp_0.arg0.vtable.iface) {
       setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "apply"), 2);
       s.callLocIdx = 66; s.pc = 8; return s.tmp_0;
@@ -7833,43 +7692,43 @@ switch (step) {
     }
   case 8:
     r0 = s.retval;
-    r0 = (s.unnamed597___U3 + 1);
-    s.unnamed597___U3 = (r0);
+    r0 = (s.unnamed837___U3 + 1);
+    s.unnamed837___U3 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed596___U2 = (undefined);
-    s.key___67614 = (undefined);
+    s.unnamed836___U2 = (undefined);
+    s.key___74791 = (undefined);
     r0 = s.caps[0].fields["flashlightSourceMap"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.keysOf(s.tmp_0);
-    s.unnamed598___U6 = (r0);
-    s.unnamed599___U7 = (0);
+    s.unnamed838___U6 = (r0);
+    s.unnamed839___U7 = (0);
   case 5:
-    s.tmp_0 = r0 = s.unnamed599___U7;
-    r0 = pxsim_Array__length(s.unnamed598___U6);
+    s.tmp_0 = r0 = s.unnamed839___U7;
+    r0 = pxsim_Array__length(s.unnamed838___U6);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 6; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed598___U6, s.unnamed599___U7);
-    s.key___67614 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed838___U6, s.unnamed839___U7);
+    s.key___74791 = (r0);
     r0 = s.caps[0].fields["flashlightSourceMap"];
     s.tmp_2 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.key___67614);
-    s.lightsource___67619 = (r0);
-    s.tmp_0 = lightsource_FlashlightLightSource_apply__P67624_mk(s);
-    s.tmp_0.arg0 = s.lightsource___67619;
-    s.tmp_0.arg1 = s.lightMap___67589;
+    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.key___74791);
+    s.lightsource___74796 = (r0);
+    s.tmp_0 = lightsource_FlashlightLightSource_apply__P74801_mk(s);
+    s.tmp_0.arg0 = s.lightsource___74796;
+    s.tmp_0.arg1 = s.lightMap___74766;
     s.callLocIdx = 67; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    r0 = (s.unnamed599___U7 + 1);
-    s.unnamed599___U7 = (r0);
+    r0 = (s.unnamed839___U7 + 1);
+    s.unnamed839___U7 = (r0);
     { step = 5; continue; }
   case 6:
-    s.unnamed598___U6 = (undefined);
-    s.tmp_0 = multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420_mk(s);
+    s.unnamed838___U6 = (undefined);
+    s.tmp_0 = multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597_mk(s);
     s.tmp_0.arg0 = s.caps[0];
-    s.tmp_0.arg1 = s.lightMap___67589;
+    s.tmp_0.arg1 = s.lightMap___74766;
     s.callLocIdx = 68; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
@@ -7878,34 +7737,34 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_startScreenEffect_inline__P67585.info = {"start":3462,"length":961,"line":89,"column":39,"endLine":111,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
+multilights_MultiLightScreenEffect_startScreenEffect_inline__P74762.info = {"start":3469,"length":961,"line":89,"column":39,"endLine":111,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
 
-function multilights_MultiLightScreenEffect_startScreenEffect_inline__P67585_mk(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect_inline__P74762_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect_inline__P67585, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect_inline__P74762, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  lightMap___67589: undefined,
-  key___67600: undefined,
-  unnamed596___U2: undefined,
-  unnamed597___U3: undefined,
-  lightsource___67605: undefined,
-  key___67614: undefined,
-  unnamed598___U6: undefined,
-  unnamed599___U7: undefined,
-  lightsource___67619: undefined,
+  lightMap___74766: undefined,
+  key___74777: undefined,
+  unnamed836___U2: undefined,
+  unnamed837___U3: undefined,
+  lightsource___74782: undefined,
+  key___74791: undefined,
+  unnamed838___U6: undefined,
+  unnamed839___U7: undefined,
+  lightsource___74796: undefined,
 } }
 
 
 
 
 
-function multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect_inline__P74807(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7924,12 +7783,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630.info = {"start":4464,"length":79,"line":113,"column":36,"endLine":115,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["oldScene"]}
+multilights_MultiLightScreenEffect_startScreenEffect_inline__P74807.info = {"start":4471,"length":79,"line":113,"column":36,"endLine":115,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["oldScene"]}
 
-function multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630_mk(s) {
+function multilights_MultiLightScreenEffect_startScreenEffect_inline__P74807_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_startScreenEffect_inline__P74807, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -7938,7 +7797,7 @@ function multilights_MultiLightScreenEffect_startScreenEffect_inline__P67630_mk(
 
 
 
-function multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420(s) {
+function multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7948,110 +7807,110 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.y___67486 = undefined;
-    s.begin___67492 = undefined;
-    s.currentLightLevel___67493 = undefined;
-    s.x___67498 = undefined;
+    s.y___74663 = undefined;
+    s.begin___74669 = undefined;
+    s.currentLightLevel___74670 = undefined;
+    s.x___74675 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
-    s.y___67486 = (0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
+    s.y___74663 = (0);
   case 1:
-    s.tmp_1 = r0 = s.y___67486;
+    s.tmp_1 = r0 = s.y___74663;
     r0 = pxsim_ImageMethods.height(globals.screen___48176);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 10; continue; }
-    s.begin___67492 = (0);
-    r0 = pxsim_ImageMethods.getPixel(s.arg1, 0, s.y___67486);
-    s.currentLightLevel___67493 = (r0);
-    s.x___67498 = (1);
+    s.begin___74669 = (0);
+    r0 = pxsim_ImageMethods.getPixel(s.arg1, 0, s.y___74663);
+    s.currentLightLevel___74670 = (r0);
+    s.x___74675 = (1);
   case 2:
-    s.tmp_1 = r0 = s.x___67498;
+    s.tmp_1 = r0 = s.x___74675;
     r0 = pxsim_ImageMethods.width(globals.screen___48176);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 7; continue; }
-    s.tmp_4 = r0 = s.currentLightLevel___67493;
-    r0 = pxsim_ImageMethods.getPixel(s.arg1, s.x___67498, s.y___67486);
+    s.tmp_4 = r0 = s.currentLightLevel___74670;
+    r0 = pxsim_ImageMethods.getPixel(s.arg1, s.x___74675, s.y___74663);
     s.tmp_5 = r0;
     r0 = (s.tmp_4 != s.tmp_5);
     s.tmp_3 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_3);
     if (!r0) { step = 5; continue; }
-    r0 = (s.currentLightLevel___67493 > 0);
+    r0 = (s.currentLightLevel___74670 > 0);
     s.tmp_6 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_6);
     if (!r0) { step = 3; continue; }
     s.tmp_7 = helpers_imageMapRect__P48101_mk(s);
     s.tmp_7.arg0 = globals.screen___48176;
-    s.tmp_7.arg1 = s.begin___67492;
-    s.tmp_7.arg2 = s.y___67486;
-    r0 = (s.x___67498 - s.begin___67492);
+    s.tmp_7.arg1 = s.begin___74669;
+    s.tmp_7.arg2 = s.y___74663;
+    r0 = (s.x___74675 - s.begin___74669);
     s.tmp_7.arg3 = r0;
     s.tmp_7.arg4 = 1;
     r0 = s.arg0.fields["bandPalettes"];
     s.tmp_8 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_8, s.currentLightLevel___67493);
+    r0 = pxsim_Array__getAt(s.tmp_8, s.currentLightLevel___74670);
     s.tmp_7.arg5 = r0;
     s.callLocIdx = 64; s.pc = 11; return s.tmp_7;
   case 11:
     r0 = s.retval;
   case 3:
   case 4:
-    r0 = pxsim_ImageMethods.getPixel(s.arg1, s.x___67498, s.y___67486);
-    s.currentLightLevel___67493 = (r0);
-    s.begin___67492 = (s.x___67498);
+    r0 = pxsim_ImageMethods.getPixel(s.arg1, s.x___74675, s.y___74663);
+    s.currentLightLevel___74670 = (r0);
+    s.begin___74669 = (s.x___74675);
   case 5:
   case 6:
-    r0 = (s.x___67498 + 1);
-    s.x___67498 = (r0);
+    r0 = (s.x___74675 + 1);
+    s.x___74675 = (r0);
     { step = 2; continue; }
   case 7:
-    r0 = (s.currentLightLevel___67493 > 0);
+    r0 = (s.currentLightLevel___74670 > 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 8; continue; }
     s.tmp_1 = helpers_imageMapRect__P48101_mk(s);
     s.tmp_1.arg0 = globals.screen___48176;
-    s.tmp_1.arg1 = s.begin___67492;
-    s.tmp_1.arg2 = s.y___67486;
+    s.tmp_1.arg1 = s.begin___74669;
+    s.tmp_1.arg2 = s.y___74663;
     r0 = pxsim_ImageMethods.width(globals.screen___48176);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 - s.begin___67492);
+    r0 = (s.tmp_2 - s.begin___74669);
     s.tmp_1.arg3 = r0;
     s.tmp_1.arg4 = 1;
     r0 = s.arg0.fields["bandPalettes"];
     s.tmp_3 = r0;
-    r0 = pxsim_Array__getAt(s.tmp_3, s.currentLightLevel___67493);
+    r0 = pxsim_Array__getAt(s.tmp_3, s.currentLightLevel___74670);
     s.tmp_1.arg5 = r0;
     s.callLocIdx = 65; s.pc = 12; return s.tmp_1;
   case 12:
     r0 = s.retval;
   case 8:
   case 9:
-    r0 = (s.y___67486 + 1);
-    s.y___67486 = (r0);
+    r0 = (s.y___74663 + 1);
+    s.y___74663 = (r0);
     { step = 1; continue; }
   case 10:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420.info = {"start":1900,"length":835,"line":47,"column":8,"endLine":63,"endColumn":9,"fileName":"Lanterns.ts","functionName":"applyLightMapToScreen","argumentNames":["this","lightMap"]}
+multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597.info = {"start":1907,"length":835,"line":47,"column":8,"endLine":63,"endColumn":9,"fileName":"Lanterns.ts","functionName":"applyLightMapToScreen","argumentNames":["this","lightMap"]}
 
-function multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420_mk(s) {
+function multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8062,10 +7921,10 @@ function multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420_mk(s) 
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  y___67486: undefined,
-  begin___67492: undefined,
-  currentLightLevel___67493: undefined,
-  x___67498: undefined,
+  y___74663: undefined,
+  begin___74669: undefined,
+  currentLightLevel___74670: undefined,
+  x___74675: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -8137,7 +7996,7 @@ function helpers_imageMapRect__P48101_mk(s) {
 
 
 
-function lightsource_FlashlightLightSource_apply__P67624(s) {
+function lightsource_FlashlightLightSource_apply__P74801(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8147,34 +8006,34 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.camera___68048 = undefined;
-    s.halfh___68052 = undefined;
-    s.cx___68055 = undefined;
-    s.cy___68062 = undefined;
-    s.prev___68069 = undefined;
-    s.x0___68070 = undefined;
-    s.x1___68071 = undefined;
-    s.x2___68072 = undefined;
-    s.x3___68073 = undefined;
-    s.offset___68074 = undefined;
-    s.angleRangeLower___68075 = undefined;
-    s.angleRangeUpper___68087 = undefined;
-    s.y___68099 = undefined;
+    s.camera___75225 = undefined;
+    s.halfh___75229 = undefined;
+    s.cx___75232 = undefined;
+    s.cy___75239 = undefined;
+    s.prev___75246 = undefined;
+    s.x0___75247 = undefined;
+    s.x1___75248 = undefined;
+    s.x2___75249 = undefined;
+    s.x3___75250 = undefined;
+    s.offset___75251 = undefined;
+    s.angleRangeLower___75252 = undefined;
+    s.angleRangeUpper___75264 = undefined;
+    s.y___75276 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     s.tmp_0 = game_currentScene__P49143_mk(s);
     s.callLocIdx = 98; s.pc = 33; return s.tmp_0;
   case 33:
     r0 = s.retval;
     r0 = r0.fields["camera"];
-    s.camera___68048 = (r0);
+    s.camera___75225 = (r0);
     r0 = s.arg0.fields["width"];
-    s.halfh___68052 = (r0);
+    s.halfh___75229 = (r0);
     s.tmp_1 = Sprite_x__P48498_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_1.arg0 = r0;
@@ -8182,10 +8041,10 @@ switch (step) {
   case 34:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = s.camera___68048.fields["drawOffsetX"];
+    r0 = s.camera___75225.fields["drawOffsetX"];
     s.tmp_2 = r0;
     r0 = (s.tmp_0 - s.tmp_2);
-    s.cx___68055 = (r0);
+    s.cx___75232 = (r0);
     s.tmp_1 = Sprite_y__P48500_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_1.arg0 = r0;
@@ -8193,10 +8052,10 @@ switch (step) {
   case 35:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = s.camera___68048.fields["drawOffsetY"];
+    r0 = s.camera___75225.fields["drawOffsetY"];
     s.tmp_2 = r0;
     r0 = (s.tmp_0 - s.tmp_2);
-    s.cy___68062 = (r0);
+    s.cy___75239 = (r0);
     r0 = s.arg0.fields["_direction"];
     s.tmp_3 = r0;
     r0 = s.arg0.fields["_angleRange"];
@@ -8208,7 +8067,7 @@ switch (step) {
     r0 = (360 + s.tmp_1);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 % 360);
-    s.angleRangeLower___68075 = (r0);
+    s.angleRangeLower___75252 = (r0);
     r0 = s.arg0.fields["_direction"];
     s.tmp_3 = r0;
     r0 = s.arg0.fields["_angleRange"];
@@ -8220,200 +8079,200 @@ switch (step) {
     r0 = (360 + s.tmp_1);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 % 360);
-    s.angleRangeUpper___68087 = (r0);
-    r0 = (0 - s.halfh___68052);
-    s.y___68099 = (r0);
+    s.angleRangeUpper___75264 = (r0);
+    r0 = (0 - s.halfh___75229);
+    s.y___75276 = (r0);
   case 1:
-    r0 = (s.y___68099 < s.halfh___68052);
+    r0 = (s.y___75276 < s.halfh___75229);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 32; continue; }
     r0 = s.arg0.fields["offsetTable"];
     s.tmp_1 = r0;
     s.tmp_3 = Math_abs__P46271_mk(s);
-    s.tmp_3.arg0 = s.y___68099;
+    s.tmp_3.arg0 = s.y___75276;
     s.callLocIdx = 103; s.pc = 36; return s.tmp_3;
   case 36:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = pxsim.BufferMethods.getByte(s.tmp_1, s.tmp_2);
-    s.offset___68074 = (r0);
-    r0 = (0 - s.offset___68074);
-    s.x0___68070 = (r0);
-    r0 = (s.y___68099 == 0);
+    s.offset___75251 = (r0);
+    r0 = (0 - s.offset___75251);
+    s.x0___75247 = (r0);
+    r0 = (s.y___75276 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 8; continue; }
-    r0 = (s.angleRangeLower___68075 > s.angleRangeUpper___68087);
+    r0 = (s.angleRangeLower___75252 > s.angleRangeUpper___75264);
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 2; continue; }
-    s.x0___68070 = (0);
+    s.x0___75247 = (0);
     { step = 7; continue; }
   case 2:
-    r0 = (180 > s.angleRangeLower___68075);
+    r0 = (180 > s.angleRangeLower___75252);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 3; continue; }
     r0 = s.tmp_0;
     { step = 4; continue; }
   case 3:
-    r0 = (180 < s.angleRangeUpper___68087);
+    r0 = (180 < s.angleRangeUpper___75264);
   case 4:
     // jmp value (already in r0)
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 5; continue; }
-    s.offset___68074 = (0);
+    s.offset___75251 = (0);
     { step = 6; continue; }
   case 5:
-    s.x0___68070 = (0);
-    s.offset___68074 = (0);
+    s.x0___75247 = (0);
+    s.offset___75251 = (0);
   case 6:
   case 7:
     { step = 29; continue; }
   case 8:
-    s.tmp_0 = r0 = s.y___68099;
-    r0 = (s.angleRangeLower___68075 / 180);
+    s.tmp_0 = r0 = s.y___75276;
+    r0 = (s.angleRangeLower___75252 / 180);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 * 3.141592653589793);
     s.tmp_2 = r0;
     r0 = pxsim.Math_.tan(s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 / s.tmp_1);
-    s.x1___68071 = (r0);
-    s.tmp_0 = r0 = s.y___68099;
-    r0 = (s.angleRangeUpper___68087 / 180);
+    s.x1___75248 = (r0);
+    s.tmp_0 = r0 = s.y___75276;
+    r0 = (s.angleRangeUpper___75264 / 180);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 * 3.141592653589793);
     s.tmp_2 = r0;
     r0 = pxsim.Math_.tan(s.tmp_2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 / s.tmp_1);
-    s.x2___68072 = (r0);
-    r0 = (s.angleRangeLower___68075 == 90);
+    s.x2___75249 = (r0);
+    r0 = (s.angleRangeLower___75252 == 90);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 9; continue; }
     r0 = s.tmp_0;
     { step = 10; continue; }
   case 9:
-    r0 = (s.angleRangeLower___68075 == 270);
+    r0 = (s.angleRangeLower___75252 == 270);
   case 10:
     // jmp value (already in r0)
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 11; continue; }
-    s.x1___68071 = (0);
+    s.x1___75248 = (0);
   case 11:
   case 12:
-    r0 = (s.angleRangeUpper___68087 == 90);
+    r0 = (s.angleRangeUpper___75264 == 90);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (!r0) { step = 13; continue; }
     r0 = s.tmp_0;
     { step = 14; continue; }
   case 13:
-    r0 = (s.angleRangeUpper___68087 == 270);
+    r0 = (s.angleRangeUpper___75264 == 270);
   case 14:
     // jmp value (already in r0)
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 15; continue; }
-    s.x2___68072 = (0);
+    s.x2___75249 = (0);
   case 15:
   case 16:
-    s.tmp_1 = lightsource_isValid__P67862_mk(s);
-    s.tmp_1.arg0 = s.x1___68071;
-    s.tmp_1.arg1 = s.y___68099;
-    s.tmp_1.arg2 = s.angleRangeLower___68075;
+    s.tmp_1 = lightsource_isValid__P75039_mk(s);
+    s.tmp_1.arg0 = s.x1___75248;
+    s.tmp_1.arg1 = s.y___75276;
+    s.tmp_1.arg2 = s.angleRangeLower___75252;
     s.callLocIdx = 106; s.pc = 37; return s.tmp_1;
   case 37:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 23; continue; }
-    s.tmp_3 = lightsource_isValid__P67862_mk(s);
-    s.tmp_3.arg0 = s.x2___68072;
-    s.tmp_3.arg1 = s.y___68099;
-    s.tmp_3.arg2 = s.angleRangeUpper___68087;
+    s.tmp_3 = lightsource_isValid__P75039_mk(s);
+    s.tmp_3.arg0 = s.x2___75249;
+    s.tmp_3.arg1 = s.y___75276;
+    s.tmp_3.arg2 = s.angleRangeUpper___75264;
     s.callLocIdx = 107; s.pc = 38; return s.tmp_3;
   case 38:
     r0 = s.retval;
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 19; continue; }
-    r0 = (s.x1___68071 > s.x2___68072);
+    r0 = (s.x1___75248 > s.x2___75249);
     s.tmp_4 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_4);
     if (!r0) { step = 17; continue; }
-    s.tmp_5 = r0 = s.x2___68072;
-    s.tmp_6 = r0 = s.x1___68071;
-    s.x1___68071 = (s.tmp_5);
-    s.x2___68072 = (s.tmp_6);
+    s.tmp_5 = r0 = s.x2___75249;
+    s.tmp_6 = r0 = s.x1___75248;
+    s.x1___75248 = (s.tmp_5);
+    s.x2___75249 = (s.tmp_6);
   case 17:
   case 18:
     s.tmp_0 = Math_max__P46273_mk(s);
-    s.tmp_0.arg0 = s.x0___68070;
-    s.tmp_0.arg1 = s.x1___68071;
+    s.tmp_0.arg0 = s.x0___75247;
+    s.tmp_0.arg1 = s.x1___75248;
     s.callLocIdx = 108; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
-    s.x0___68070 = (r0);
+    s.x0___75247 = (r0);
     s.tmp_0 = Math_min__P46274_mk(s);
-    s.tmp_0.arg0 = s.offset___68074;
-    s.tmp_0.arg1 = s.x2___68072;
+    s.tmp_0.arg0 = s.offset___75251;
+    s.tmp_0.arg1 = s.x2___75249;
     s.callLocIdx = 109; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
-    s.offset___68074 = (r0);
+    s.offset___75251 = (r0);
     { step = 22; continue; }
   case 19:
-    r0 = (s.y___68099 < 0);
+    r0 = (s.y___75276 < 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 20; continue; }
-    s.x0___68070 = (s.x1___68071);
+    s.x0___75247 = (s.x1___75248);
     { step = 21; continue; }
   case 20:
-    s.offset___68074 = (s.x1___68071);
+    s.offset___75251 = (s.x1___75248);
   case 21:
   case 22:
     { step = 28; continue; }
   case 23:
-    s.tmp_1 = lightsource_isValid__P67862_mk(s);
-    s.tmp_1.arg0 = s.x2___68072;
-    s.tmp_1.arg1 = s.y___68099;
-    s.tmp_1.arg2 = s.angleRangeUpper___68087;
+    s.tmp_1 = lightsource_isValid__P75039_mk(s);
+    s.tmp_1.arg0 = s.x2___75249;
+    s.tmp_1.arg1 = s.y___75276;
+    s.tmp_1.arg2 = s.angleRangeUpper___75264;
     s.callLocIdx = 110; s.pc = 41; return s.tmp_1;
   case 41:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 26; continue; }
-    r0 = (s.y___68099 < 0);
+    r0 = (s.y___75276 < 0);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 24; continue; }
-    s.offset___68074 = (s.x2___68072);
+    s.offset___75251 = (s.x2___75249);
     { step = 25; continue; }
   case 24:
-    s.x0___68070 = (s.x2___68072);
+    s.x0___75247 = (s.x2___75249);
   case 25:
     { step = 27; continue; }
   case 26:
-    s.x0___68070 = (0);
-    s.offset___68074 = (0);
+    s.x0___75247 = (0);
+    s.offset___75251 = (0);
   case 27:
   case 28:
   case 29:
-    r0 = (s.offset___68074 - s.x0___68070);
+    r0 = (s.offset___75251 - s.x0___75247);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 > 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 30; continue; }
-    s.tmp_2 = r0 = s.offset___68074;
+    s.tmp_2 = r0 = s.offset___75251;
     r0 = s.arg0.fields["_shiver"];
     s.tmp_6 = r0;
     r0 = (s.tmp_6 * 5);
@@ -8423,8 +8282,8 @@ switch (step) {
     r0 = pxsim.Math_.idiv(s.tmp_4, 5);
     s.tmp_3 = r0;
     r0 = (s.tmp_2 + s.tmp_3);
-    s.offset___68074 = (r0);
-    s.tmp_0 = r0 = s.x0___68070;
+    s.offset___75251 = (r0);
+    s.tmp_0 = r0 = s.x0___75247;
     r0 = s.arg0.fields["_shiver"];
     s.tmp_4 = r0;
     r0 = (s.tmp_4 * 5);
@@ -8434,15 +8293,15 @@ switch (step) {
     r0 = pxsim.Math_.idiv(s.tmp_2, 5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 - s.tmp_1);
-    s.x0___68070 = (r0);
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.x0___75247 = (r0);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68055 + s.x0___68070);
+    r0 = (s.cx___75232 + s.x0___75247);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68062 + s.y___68099);
+    r0 = (s.cy___75239 + s.y___75276);
     s.tmp_0.arg2 = r0;
     s.tmp_1 = Math_abs__P46271_mk(s);
-    r0 = (s.x0___68070 - s.offset___68074);
+    r0 = (s.x0___75247 - s.offset___75251);
     s.tmp_1.arg0 = r0;
     s.callLocIdx = 111; s.pc = 43; return s.tmp_1;
   case 43:
@@ -8455,20 +8314,20 @@ switch (step) {
     r0 = s.retval;
   case 30:
   case 31:
-    r0 = (s.y___68099 + 1);
-    s.y___68099 = (r0);
+    r0 = (s.y___75276 + 1);
+    s.y___75276 = (r0);
     { step = 1; continue; }
   case 32:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_apply__P67624.info = {"start":14355,"length":3089,"line":375,"column":8,"endLine":449,"endColumn":9,"fileName":"Lanterns.ts","functionName":"apply","argumentNames":["this","lightMap"]}
+lightsource_FlashlightLightSource_apply__P74801.info = {"start":14354,"length":3089,"line":375,"column":8,"endLine":449,"endColumn":9,"fileName":"Lanterns.ts","functionName":"apply","argumentNames":["this","lightMap"]}
 
-function lightsource_FlashlightLightSource_apply__P67624_mk(s) {
+function lightsource_FlashlightLightSource_apply__P74801_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_apply__P67624, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_apply__P74801, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8477,19 +8336,19 @@ function lightsource_FlashlightLightSource_apply__P67624_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  camera___68048: undefined,
-  halfh___68052: undefined,
-  cx___68055: undefined,
-  cy___68062: undefined,
-  prev___68069: undefined,
-  x0___68070: undefined,
-  x1___68071: undefined,
-  x2___68072: undefined,
-  x3___68073: undefined,
-  offset___68074: undefined,
-  angleRangeLower___68075: undefined,
-  angleRangeUpper___68087: undefined,
-  y___68099: undefined,
+  camera___75225: undefined,
+  halfh___75229: undefined,
+  cx___75232: undefined,
+  cy___75239: undefined,
+  prev___75246: undefined,
+  x0___75247: undefined,
+  x1___75248: undefined,
+  x2___75249: undefined,
+  x3___75250: undefined,
+  offset___75251: undefined,
+  angleRangeLower___75252: undefined,
+  angleRangeUpper___75264: undefined,
+  y___75276: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -8498,7 +8357,7 @@ function lightsource_FlashlightLightSource_apply__P67624_mk(s) {
 
 
 
-function lightsource_changeRowLightLevel__P67824(s) {
+function lightsource_changeRowLightLevel__P75001(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8508,8 +8367,8 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.x0___67830 = undefined;
-    s.currentLightLevel___67840 = undefined;
+    s.x0___75007 = undefined;
+    s.currentLightLevel___75017 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -8519,9 +8378,9 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = (s.arg1 | 0);
-    s.x0___67830 = (r0);
+    s.x0___75007 = (r0);
   case 1:
-    s.tmp_1 = r0 = s.x0___67830;
+    s.tmp_1 = r0 = s.x0___75007;
     r0 = (s.arg3 + s.arg1);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 | 0);
@@ -8530,41 +8389,41 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_ImageMethods.getPixel(s.arg0, s.x0___67830, s.arg2);
-    s.currentLightLevel___67840 = (r0);
+    r0 = pxsim_ImageMethods.getPixel(s.arg0, s.x0___75007, s.arg2);
+    s.currentLightLevel___75017 = (r0);
     s.tmp_0 = r0 = s.arg0;
-    s.tmp_1 = r0 = s.x0___67830;
+    s.tmp_1 = r0 = s.x0___75007;
     s.tmp_2 = r0 = s.arg2;
     s.tmp_4 = Math_min__P46274_mk(s);
     s.tmp_4.arg0 = s.arg4;
-    s.tmp_4.arg1 = s.currentLightLevel___67840;
+    s.tmp_4.arg1 = s.currentLightLevel___75017;
     s.callLocIdx = 93; s.pc = 3; return s.tmp_4;
   case 3:
     r0 = s.retval;
     s.tmp_3 = r0;
     r0 = pxsim_ImageMethods.setPixel(s.tmp_0, s.tmp_1, s.tmp_2, s.tmp_3);
-    r0 = (s.x0___67830 + 1);
-    s.x0___67830 = (r0);
+    r0 = (s.x0___75007 + 1);
+    s.x0___75007 = (r0);
     { step = 1; continue; }
   case 2:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_changeRowLightLevel__P67824.info = {"start":9244,"length":522,"line":230,"column":4,"endLine":235,"endColumn":5,"fileName":"Lanterns.ts","functionName":"changeRowLightLevel","argumentNames":["lightMap","x","y","width","lightLevel"]}
+lightsource_changeRowLightLevel__P75001.info = {"start":9247,"length":522,"line":230,"column":4,"endLine":235,"endColumn":5,"fileName":"Lanterns.ts","functionName":"changeRowLightLevel","argumentNames":["lightMap","x","y","width","lightLevel"]}
 
-function lightsource_changeRowLightLevel__P67824_mk(s) {
+function lightsource_changeRowLightLevel__P75001_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_changeRowLightLevel__P67824, depth: s.depth + 1,
+        parent: s, fn: lightsource_changeRowLightLevel__P75001, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  x0___67830: undefined,
-  currentLightLevel___67840: undefined,
+  x0___75007: undefined,
+  currentLightLevel___75017: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -8576,7 +8435,7 @@ function lightsource_changeRowLightLevel__P67824_mk(s) {
 
 
 
-function lightsource_isValid__P67862(s) {
+function lightsource_isValid__P75039(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8692,12 +8551,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_isValid__P67862.info = {"start":9877,"length":654,"line":241,"column":4,"endLine":262,"endColumn":5,"fileName":"Lanterns.ts","functionName":"isValid","argumentNames":["x","y","angle"]}
+lightsource_isValid__P75039.info = {"start":9880,"length":654,"line":241,"column":4,"endLine":262,"endColumn":5,"fileName":"Lanterns.ts","functionName":"isValid","argumentNames":["x","y","angle"]}
 
-function lightsource_isValid__P67862_mk(s) {
+function lightsource_isValid__P75039_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_isValid__P67862, depth: s.depth + 1,
+        parent: s, fn: lightsource_isValid__P75039, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8721,7 +8580,7 @@ function lightsource_isValid__P67862_mk(s) {
 
 
 
-function lightsource_degreeToRadius__P67856(s) {
+function lightsource_degreeToRadius__P75033(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8741,12 +8600,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_degreeToRadius__P67856.info = {"start":9774,"length":95,"line":237,"column":4,"endLine":239,"endColumn":5,"fileName":"Lanterns.ts","functionName":"degreeToRadius","argumentNames":["degree"]}
+lightsource_degreeToRadius__P75033.info = {"start":9777,"length":95,"line":237,"column":4,"endLine":239,"endColumn":5,"fileName":"Lanterns.ts","functionName":"degreeToRadius","argumentNames":["degree"]}
 
-function lightsource_degreeToRadius__P67856_mk(s) {
+function lightsource_degreeToRadius__P75033_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_degreeToRadius__P67856, depth: s.depth + 1,
+        parent: s, fn: lightsource_degreeToRadius__P75033, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -8801,7 +8660,7 @@ function Math_abs__P46271_mk(s) {
 
 
 
-function multilights_addLightSource__P67780(s) {
+function multilights_addLightSource__P74957(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8818,8 +8677,8 @@ switch (step) {
       s.arg3 = (s.lambdaArgs[3]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = multilights_MultiLightScreenEffect_addLightSource__P67427_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_addLightSource__P74604_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 83; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -8835,12 +8694,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_addLightSource__P67780.info = {"start":7211,"length":228,"line":186,"column":4,"endLine":188,"endColumn":5,"fileName":"Lanterns.ts","functionName":"addLightSource","argumentNames":["sprite","bandWidth","centerRadius","shiver"]}
+multilights_addLightSource__P74957.info = {"start":7214,"length":228,"line":186,"column":4,"endLine":188,"endColumn":5,"fileName":"Lanterns.ts","functionName":"addLightSource","argumentNames":["sprite","bandWidth","centerRadius","shiver"]}
 
-function multilights_addLightSource__P67780_mk(s) {
+function multilights_addLightSource__P74957_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_addLightSource__P67780, depth: s.depth + 1,
+        parent: s, fn: multilights_addLightSource__P74957, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -8854,7 +8713,7 @@ function multilights_addLightSource__P67780_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_addLightSource__P67427(s) {
+function multilights_MultiLightScreenEffect_addLightSource__P74604(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8864,7 +8723,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.newLightSource___67695 = undefined;
+    s.newLightSource___74872 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -8874,22 +8733,22 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = s.arg0.fields["lightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, s.tmp_1);
-    s.newLightSource___67695 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.newLightSource___67695);
+    s.newLightSource___74872 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.newLightSource___74872);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(lightsource_CircleLightSource__C67704_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(lightsource_CircleLightSource__C74881_VT);
     s.tmp_2 = r0;
-    s.tmp_3 = lightsource_CircleLightSource_constructor__P67716_mk(s);
+    s.tmp_3 = lightsource_CircleLightSource_constructor__P74893_mk(s);
     s.tmp_3.arg0 = s.tmp_2;
     s.tmp_3.arg1 = s.arg1;
     s.tmp_3.arg2 = s.arg2;
@@ -8899,15 +8758,15 @@ switch (step) {
     s.callLocIdx = 74; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
-    s.newLightSource___67695 = (s.tmp_2);
+    s.newLightSource___74872 = (s.tmp_2);
     r0 = s.arg0.fields["lightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.newLightSource___67695);
+    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.newLightSource___74872);
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_addLightSource_inline__P67729);
+    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_addLightSource_inline__P74906);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg1);
     s.tmp_1 = Sprite_onDestroyed__P48571_mk(s);
@@ -8916,22 +8775,22 @@ switch (step) {
     s.callLocIdx = 76; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
-    r0 = s.newLightSource___67695;
+    r0 = s.newLightSource___74872;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_addLightSource__P67427.info = {"start":5353,"length":616,"line":135,"column":8,"endLine":148,"endColumn":9,"fileName":"Lanterns.ts","functionName":"addLightSource","argumentNames":["this","sprite","bandWidth","centerRadius","shiver"]}
+multilights_MultiLightScreenEffect_addLightSource__P74604.info = {"start":5360,"length":616,"line":135,"column":8,"endLine":148,"endColumn":9,"fileName":"Lanterns.ts","functionName":"addLightSource","argumentNames":["this","sprite","bandWidth","centerRadius","shiver"]}
 
-function multilights_MultiLightScreenEffect_addLightSource__P67427_mk(s) {
+function multilights_MultiLightScreenEffect_addLightSource__P74604_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_addLightSource__P67427, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_addLightSource__P74604, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  newLightSource___67695: undefined,
+  newLightSource___74872: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -8943,7 +8802,7 @@ function multilights_MultiLightScreenEffect_addLightSource__P67427_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_addLightSource_inline__P67729(s) {
+function multilights_MultiLightScreenEffect_addLightSource_inline__P74906(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8953,7 +8812,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = multilights_removeLightSource__P67687_mk(s);
+    s.tmp_0 = multilights_removeLightSource__P74864_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.callLocIdx = 75; s.pc = 1; return s.tmp_0;
   case 1:
@@ -8962,12 +8821,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_addLightSource_inline__P67729.info = {"start":5816,"length":71,"line":143,"column":31,"endLine":145,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
+multilights_MultiLightScreenEffect_addLightSource_inline__P74906.info = {"start":5823,"length":71,"line":143,"column":31,"endLine":145,"endColumn":13,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
 
-function multilights_MultiLightScreenEffect_addLightSource_inline__P67729_mk(s) {
+function multilights_MultiLightScreenEffect_addLightSource_inline__P74906_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_addLightSource_inline__P67729, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_addLightSource_inline__P74906, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -8976,7 +8835,7 @@ function multilights_MultiLightScreenEffect_addLightSource_inline__P67729_mk(s) 
 
 
 
-function multilights_removeLightSource__P67687(s) {
+function multilights_removeLightSource__P74864(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8990,8 +8849,8 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = multilights_MultiLightScreenEffect_removeLightSource__P67422_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_removeLightSource__P74599_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 81; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -9004,12 +8863,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_removeLightSource__P67687.info = {"start":6788,"length":130,"line":176,"column":4,"endLine":178,"endColumn":5,"fileName":"Lanterns.ts","functionName":"removeLightSource","argumentNames":["sprite"]}
+multilights_removeLightSource__P74864.info = {"start":6791,"length":130,"line":176,"column":4,"endLine":178,"endColumn":5,"fileName":"Lanterns.ts","functionName":"removeLightSource","argumentNames":["sprite"]}
 
-function multilights_removeLightSource__P67687_mk(s) {
+function multilights_removeLightSource__P74864_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_removeLightSource__P67687, depth: s.depth + 1,
+        parent: s, fn: multilights_removeLightSource__P74864, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9020,7 +8879,7 @@ function multilights_removeLightSource__P67687_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_removeLightSource__P67422(s) {
+function multilights_MultiLightScreenEffect_removeLightSource__P74599(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9036,7 +8895,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = s.arg0.fields["lightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
@@ -9046,12 +8905,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_removeLightSource__P67422.info = {"start":2935,"length":97,"line":70,"column":8,"endLine":72,"endColumn":9,"fileName":"Lanterns.ts","functionName":"removeLightSource","argumentNames":["this","sprite"]}
+multilights_MultiLightScreenEffect_removeLightSource__P74599.info = {"start":2942,"length":97,"line":70,"column":8,"endLine":72,"endColumn":9,"fileName":"Lanterns.ts","functionName":"removeLightSource","argumentNames":["this","sprite"]}
 
-function multilights_MultiLightScreenEffect_removeLightSource__P67422_mk(s) {
+function multilights_MultiLightScreenEffect_removeLightSource__P74599_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_removeLightSource__P67422, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_removeLightSource__P74599, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9100,7 +8959,7 @@ function Sprite_onDestroyed__P48571_mk(s) {
 
 
 
-function lightsource_CircleLightSource_constructor__P67716(s) {
+function lightsource_CircleLightSource_constructor__P74893(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9120,13 +8979,13 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     r0 = (s.arg0).fields["rings"] = (s.arg3);
     r0 = (s.arg0).fields["sprite"] = (s.arg1);
     r0 = (s.arg0).fields["_bandWidth"] = (s.arg2);
     r0 = (s.arg0).fields["rings"] = (s.arg3);
     r0 = (s.arg0).fields["_centerRadius"] = (s.arg4);
-    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P67714_mk(s);
+    s.tmp_0 = lightsource_CircleLightSource_prepareOffset__P74891_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 115; s.pc = 1; return s.tmp_0;
   case 1:
@@ -9136,12 +8995,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_constructor__P67716.info = {"start":19991,"length":342,"line":529,"column":8,"endLine":536,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this","sprite","bandWidth","rings","centerRadius","shiver"]}
+lightsource_CircleLightSource_constructor__P74893.info = {"start":19986,"length":342,"line":529,"column":8,"endLine":536,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this","sprite","bandWidth","rings","centerRadius","shiver"]}
 
-function lightsource_CircleLightSource_constructor__P67716_mk(s) {
+function lightsource_CircleLightSource_constructor__P74893_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_constructor__P67716, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_constructor__P74893, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -9156,7 +9015,7 @@ function lightsource_CircleLightSource_constructor__P67716_mk(s) {
 
 
 
-function multilights_addFlashLightSource__P67796(s) {
+function multilights_addFlashLightSource__P74973(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9176,8 +9035,8 @@ switch (step) {
       s.arg6 = (s.lambdaArgs[6]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = multilights_MultiLightScreenEffect_addFlashLightSource__P67426_mk(s);
-    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P67418_mk(s);
+    s.tmp_0 = multilights_MultiLightScreenEffect_addFlashLightSource__P74603_mk(s);
+    s.tmp_1 = multilights_MultiLightScreenEffect_getInstance__P74595_mk(s);
     s.callLocIdx = 87; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -9196,12 +9055,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_addFlashLightSource__P67796.info = {"start":8063,"length":324,"line":204,"column":4,"endLine":206,"endColumn":5,"fileName":"Lanterns.ts","functionName":"addFlashLightSource","argumentNames":["sprite","direction","lightRange","angleRange","darkness","shiver","bandWidth"]}
+multilights_addFlashLightSource__P74973.info = {"start":8066,"length":324,"line":204,"column":4,"endLine":206,"endColumn":5,"fileName":"Lanterns.ts","functionName":"addFlashLightSource","argumentNames":["sprite","direction","lightRange","angleRange","darkness","shiver","bandWidth"]}
 
-function multilights_addFlashLightSource__P67796_mk(s) {
+function multilights_addFlashLightSource__P74973_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_addFlashLightSource__P67796, depth: s.depth + 1,
+        parent: s, fn: multilights_addFlashLightSource__P74973, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -9218,7 +9077,7 @@ function multilights_addFlashLightSource__P67796_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_addFlashLightSource__P67426(s) {
+function multilights_MultiLightScreenEffect_addFlashLightSource__P74603(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9228,7 +9087,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.newLightSource___67644 = undefined;
+    s.newLightSource___74821 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -9241,22 +9100,22 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C67417_VT)) failedCast(r0);
+    if (!checkSubtype(r0, multilights_MultiLightScreenEffect__C74594_VT)) failedCast(r0);
     r0 = s.arg0.fields["flashlightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, s.tmp_1);
-    s.newLightSource___67644 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.newLightSource___67644);
+    s.newLightSource___74821 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.newLightSource___74821);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(lightsource_FlashlightLightSource__C67653_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(lightsource_FlashlightLightSource__C74830_VT);
     s.tmp_2 = r0;
-    s.tmp_3 = lightsource_FlashlightLightSource_constructor__P67669_mk(s);
+    s.tmp_3 = lightsource_FlashlightLightSource_constructor__P74846_mk(s);
     s.tmp_3.arg0 = s.tmp_2;
     s.tmp_3.arg1 = s.arg1;
     s.tmp_3.arg2 = s.arg2;
@@ -9268,13 +9127,13 @@ switch (step) {
     s.callLocIdx = 71; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
-    s.newLightSource___67644 = (s.tmp_2);
+    s.newLightSource___74821 = (s.tmp_2);
     r0 = s.arg0.fields["flashlightSourceMap"];
     s.tmp_0 = r0;
     r0 = s.arg1.fields["id"];
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.newLightSource___67644);
-    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685);
+    r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.newLightSource___74821);
+    r0 = pxsim_pxtcore_mkAction(1, multilights_MultiLightScreenEffect_addFlashLightSource_inline__P74862);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg1);
     s.tmp_1 = Sprite_onDestroyed__P48571_mk(s);
@@ -9285,22 +9144,22 @@ switch (step) {
     r0 = s.retval;
   case 1:
   case 2:
-    r0 = s.newLightSource___67644;
+    r0 = s.newLightSource___74821;
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_addFlashLightSource__P67426.info = {"start":4600,"length":741,"line":120,"column":8,"endLine":133,"endColumn":9,"fileName":"Lanterns.ts","functionName":"addFlashLightSource","argumentNames":["this","sprite","bandWidth","direction","lightRange","angleRange","darkness","shiver"]}
+multilights_MultiLightScreenEffect_addFlashLightSource__P74603.info = {"start":4607,"length":741,"line":120,"column":8,"endLine":133,"endColumn":9,"fileName":"Lanterns.ts","functionName":"addFlashLightSource","argumentNames":["this","sprite","bandWidth","direction","lightRange","angleRange","darkness","shiver"]}
 
-function multilights_MultiLightScreenEffect_addFlashLightSource__P67426_mk(s) {
+function multilights_MultiLightScreenEffect_addFlashLightSource__P74603_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_addFlashLightSource__P67426, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_addFlashLightSource__P74603, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  newLightSource___67644: undefined,
+  newLightSource___74821: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -9315,7 +9174,7 @@ function multilights_MultiLightScreenEffect_addFlashLightSource__P67426_mk(s) {
 
 
 
-function multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685(s) {
+function multilights_MultiLightScreenEffect_addFlashLightSource_inline__P74862(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9325,7 +9184,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = multilights_removeLightSource__P67687_mk(s);
+    s.tmp_0 = multilights_removeLightSource__P74864_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.callLocIdx = 72; s.pc = 1; return s.tmp_0;
   case 1:
@@ -9334,12 +9193,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685.info = {"start":5161,"length":79,"line":127,"column":35,"endLine":129,"endColumn":17,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
+multilights_MultiLightScreenEffect_addFlashLightSource_inline__P74862.info = {"start":5168,"length":79,"line":127,"column":35,"endLine":129,"endColumn":17,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":[]}
 
-function multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685_mk(s) {
+function multilights_MultiLightScreenEffect_addFlashLightSource_inline__P74862_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685, depth: s.depth + 1,
+        parent: s, fn: multilights_MultiLightScreenEffect_addFlashLightSource_inline__P74862, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -9348,7 +9207,7 @@ function multilights_MultiLightScreenEffect_addFlashLightSource_inline__P67685_m
 
 
 
-function lightsource_FlashlightLightSource_constructor__P67669(s) {
+function lightsource_FlashlightLightSource_constructor__P74846(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -9370,7 +9229,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C67653_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_FlashlightLightSource__C74830_VT)) failedCast(r0);
     r0 = (s.arg0).fields["sprite"] = (s.arg1);
     r0 = (s.arg0).fields["_bandWidth"] = (s.arg2);
     s.tmp_0 = r0 = s.arg0;
@@ -9384,7 +9243,7 @@ switch (step) {
     r0 = (s.arg0).fields["_lightRange"] = (s.arg4);
     r0 = (s.arg0).fields["_darkness"] = (s.arg6);
     r0 = (s.arg0).fields["_shiver"] = (s.arg7);
-    s.tmp_0 = lightsource_FlashlightLightSource_prepareOffset__P67668_mk(s);
+    s.tmp_0 = lightsource_FlashlightLightSource_prepareOffset__P74845_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 97; s.pc = 1; return s.tmp_0;
   case 1:
@@ -9393,12 +9252,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_FlashlightLightSource_constructor__P67669.info = {"start":13865,"length":474,"line":361,"column":8,"endLine":371,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this","sprite","bandWidth","direction","lightRange","angleRange","darkness","shiver"]}
+lightsource_FlashlightLightSource_constructor__P74846.info = {"start":13864,"length":474,"line":361,"column":8,"endLine":371,"endColumn":9,"fileName":"Lanterns.ts","functionName":"inline","argumentNames":["this","sprite","bandWidth","direction","lightRange","angleRange","darkness","shiver"]}
 
-function lightsource_FlashlightLightSource_constructor__P67669_mk(s) {
+function lightsource_FlashlightLightSource_constructor__P74846_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_FlashlightLightSource_constructor__P67669, depth: s.depth + 1,
+        parent: s, fn: lightsource_FlashlightLightSource_constructor__P74846, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43722,7 +43581,7 @@ function tiles_TileMap_data__P48884_mk(s) {
 
 
 
-function lightsource_CircleLightSource_apply__P67715(s) {
+function lightsource_CircleLightSource_apply__P74892(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -43732,29 +43591,29 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.camera___68383 = undefined;
-    s.halfh___68387 = undefined;
-    s.cx___68390 = undefined;
-    s.cy___68397 = undefined;
-    s.prev___68404 = undefined;
-    s.offset___68405 = undefined;
-    s.band___68406 = undefined;
-    s.y___68407 = undefined;
+    s.camera___75560 = undefined;
+    s.halfh___75564 = undefined;
+    s.cx___75567 = undefined;
+    s.cy___75574 = undefined;
+    s.prev___75581 = undefined;
+    s.offset___75582 = undefined;
+    s.band___75583 = undefined;
+    s.y___75584 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, lightsource_CircleLightSource__C67704_VT)) failedCast(r0);
+    if (!checkSubtype(r0, lightsource_CircleLightSource__C74881_VT)) failedCast(r0);
     s.tmp_0 = game_currentScene__P49143_mk(s);
     s.callLocIdx = 116; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
     r0 = r0.fields["camera"];
-    s.camera___68383 = (r0);
+    s.camera___75560 = (r0);
     r0 = s.arg0.fields["width"];
-    s.halfh___68387 = (r0);
+    s.halfh___75564 = (r0);
     s.tmp_1 = Sprite_x__P48498_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_1.arg0 = r0;
@@ -43762,10 +43621,10 @@ switch (step) {
   case 10:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = s.camera___68383.fields["drawOffsetX"];
+    r0 = s.camera___75560.fields["drawOffsetX"];
     s.tmp_2 = r0;
     r0 = (s.tmp_0 - s.tmp_2);
-    s.cx___68390 = (r0);
+    s.cx___75567 = (r0);
     s.tmp_1 = Sprite_y__P48500_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_1.arg0 = r0;
@@ -43773,33 +43632,33 @@ switch (step) {
   case 11:
     r0 = s.retval;
     s.tmp_0 = r0;
-    r0 = s.camera___68383.fields["drawOffsetY"];
+    r0 = s.camera___75560.fields["drawOffsetY"];
     s.tmp_2 = r0;
     r0 = (s.tmp_0 - s.tmp_2);
-    s.cy___68397 = (r0);
-    s.y___68407 = (0);
+    s.cy___75574 = (r0);
+    s.y___75584 = (0);
   case 1:
-    r0 = (s.y___68407 < s.halfh___68387);
+    r0 = (s.y___75584 < s.halfh___75564);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 8; continue; }
     r0 = s.arg0.fields["rings"];
-    s.band___68406 = (r0);
-    s.prev___68404 = (0);
+    s.band___75583 = (r0);
+    s.prev___75581 = (0);
     r0 = s.arg0.fields["offsetTable"];
     s.tmp_0 = r0;
     r0 = s.arg0.fields["rings"];
     s.tmp_4 = r0;
-    r0 = (s.y___68407 * s.tmp_4);
+    r0 = (s.y___75584 * s.tmp_4);
     s.tmp_3 = r0;
-    r0 = (s.tmp_3 + s.band___68406);
+    r0 = (s.tmp_3 + s.band___75583);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 - 1);
     s.tmp_1 = r0;
     r0 = pxsim.BufferMethods.getByte(s.tmp_0, s.tmp_1);
-    s.offset___68405 = (r0);
+    s.offset___75582 = (r0);
   case 2:
-    r0 = (s.band___68406 >= 0);
+    r0 = (s.band___75583 >= 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 7; continue; }
@@ -43807,17 +43666,17 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = s.arg0.fields["rings"];
     s.tmp_5 = r0;
-    r0 = (s.y___68407 * s.tmp_5);
+    r0 = (s.y___75584 * s.tmp_5);
     s.tmp_4 = r0;
-    r0 = (s.tmp_4 + s.band___68406);
+    r0 = (s.tmp_4 + s.band___75583);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 - 1);
     s.tmp_2 = r0;
     r0 = pxsim.BufferMethods.getByte(s.tmp_1, s.tmp_2);
-    s.offset___68405 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.offset___68405);
+    s.offset___75582 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.offset___75582);
     if (!r0) { step = 3; continue; }
-    s.tmp_0 = r0 = s.offset___68405;
+    s.tmp_0 = r0 = s.offset___75582;
     r0 = s.arg0.fields["_shiver"];
     s.tmp_4 = r0;
     r0 = (s.tmp_4 * 5);
@@ -43827,132 +43686,132 @@ switch (step) {
     r0 = pxsim.Math_.idiv(s.tmp_2, 5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
-    s.offset___68405 = (r0);
+    s.offset___75582 = (r0);
   case 3:
   case 4:
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 + s.offset___68405);
+    r0 = (s.cx___75567 + s.offset___75582);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 + s.y___68407);
+    r0 = (s.cy___75574 + s.y___75584);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 1);
     s.tmp_0.arg2 = r0;
-    r0 = (s.prev___68404 - s.offset___68405);
+    r0 = (s.prev___75581 - s.offset___75582);
     s.tmp_0.arg3 = r0;
-    s.tmp_0.arg4 = s.band___68406;
+    s.tmp_0.arg4 = s.band___75583;
     s.callLocIdx = 119; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 - s.prev___68404);
+    r0 = (s.cx___75567 - s.prev___75581);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 + s.y___68407);
+    r0 = (s.cy___75574 + s.y___75584);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 1);
     s.tmp_0.arg2 = r0;
-    r0 = (s.prev___68404 - s.offset___68405);
+    r0 = (s.prev___75581 - s.offset___75582);
     s.tmp_0.arg3 = r0;
-    s.tmp_0.arg4 = s.band___68406;
+    s.tmp_0.arg4 = s.band___75583;
     s.callLocIdx = 120; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 + s.offset___68405);
+    r0 = (s.cx___75567 + s.offset___75582);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 - s.y___68407);
+    r0 = (s.cy___75574 - s.y___75584);
     s.tmp_0.arg2 = r0;
-    r0 = (s.prev___68404 - s.offset___68405);
+    r0 = (s.prev___75581 - s.offset___75582);
     s.tmp_0.arg3 = r0;
-    s.tmp_0.arg4 = s.band___68406;
+    s.tmp_0.arg4 = s.band___75583;
     s.callLocIdx = 121; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 - s.prev___68404);
+    r0 = (s.cx___75567 - s.prev___75581);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 - s.y___68407);
+    r0 = (s.cy___75574 - s.y___75584);
     s.tmp_0.arg2 = r0;
-    r0 = (s.prev___68404 - s.offset___68405);
+    r0 = (s.prev___75581 - s.offset___75582);
     s.tmp_0.arg3 = r0;
-    s.tmp_0.arg4 = s.band___68406;
+    s.tmp_0.arg4 = s.band___75583;
     s.callLocIdx = 122; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
-    r0 = (s.band___68406 == 0);
+    r0 = (s.band___75583 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 5; continue; }
-    s.tmp_1 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_1 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_1.arg0 = s.arg1;
-    s.tmp_1.arg1 = s.cx___68390;
-    r0 = (s.cy___68397 + s.y___68407);
+    s.tmp_1.arg1 = s.cx___75567;
+    r0 = (s.cy___75574 + s.y___75584);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 + 1);
     s.tmp_1.arg2 = r0;
-    s.tmp_1.arg3 = s.prev___68404;
+    s.tmp_1.arg3 = s.prev___75581;
     s.tmp_1.arg4 = 0;
     s.callLocIdx = 123; s.pc = 16; return s.tmp_1;
   case 16:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 - s.prev___68404);
+    r0 = (s.cx___75567 - s.prev___75581);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 + s.y___68407);
+    r0 = (s.cy___75574 + s.y___75584);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 1);
     s.tmp_0.arg2 = r0;
-    s.tmp_0.arg3 = s.prev___68404;
+    s.tmp_0.arg3 = s.prev___75581;
     s.tmp_0.arg4 = 0;
     s.callLocIdx = 124; s.pc = 17; return s.tmp_0;
   case 17:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    s.tmp_0.arg1 = s.cx___68390;
-    r0 = (s.cy___68397 - s.y___68407);
+    s.tmp_0.arg1 = s.cx___75567;
+    r0 = (s.cy___75574 - s.y___75584);
     s.tmp_0.arg2 = r0;
-    s.tmp_0.arg3 = s.prev___68404;
+    s.tmp_0.arg3 = s.prev___75581;
     s.tmp_0.arg4 = 0;
     s.callLocIdx = 125; s.pc = 18; return s.tmp_0;
   case 18:
     r0 = s.retval;
-    s.tmp_0 = lightsource_changeRowLightLevel__P67824_mk(s);
+    s.tmp_0 = lightsource_changeRowLightLevel__P75001_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    r0 = (s.cx___68390 - s.prev___68404);
+    r0 = (s.cx___75567 - s.prev___75581);
     s.tmp_0.arg1 = r0;
-    r0 = (s.cy___68397 - s.y___68407);
+    r0 = (s.cy___75574 - s.y___75584);
     s.tmp_0.arg2 = r0;
-    s.tmp_0.arg3 = s.prev___68404;
+    s.tmp_0.arg3 = s.prev___75581;
     s.tmp_0.arg4 = 0;
     s.callLocIdx = 126; s.pc = 19; return s.tmp_0;
   case 19:
     r0 = s.retval;
   case 5:
   case 6:
-    s.prev___68404 = (s.offset___68405);
-    r0 = (s.band___68406 - 1);
-    s.band___68406 = (r0);
+    s.prev___75581 = (s.offset___75582);
+    r0 = (s.band___75583 - 1);
+    s.band___75583 = (r0);
     { step = 2; continue; }
   case 7:
-    r0 = (s.y___68407 + 1);
-    s.y___68407 = (r0);
+    r0 = (s.y___75584 + 1);
+    s.y___75584 = (r0);
     { step = 1; continue; }
   case 8:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-lightsource_CircleLightSource_apply__P67715.info = {"start":20345,"length":1880,"line":538,"column":8,"endLine":578,"endColumn":9,"fileName":"Lanterns.ts","functionName":"apply","argumentNames":["this","lightMap"]}
+lightsource_CircleLightSource_apply__P74892.info = {"start":20340,"length":1880,"line":538,"column":8,"endLine":578,"endColumn":9,"fileName":"Lanterns.ts","functionName":"apply","argumentNames":["this","lightMap"]}
 
-function lightsource_CircleLightSource_apply__P67715_mk(s) {
+function lightsource_CircleLightSource_apply__P74892_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: lightsource_CircleLightSource_apply__P67715, depth: s.depth + 1,
+        parent: s, fn: lightsource_CircleLightSource_apply__P74892, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -43960,14 +43819,14 @@ function lightsource_CircleLightSource_apply__P67715_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  camera___68383: undefined,
-  halfh___68387: undefined,
-  cx___68390: undefined,
-  cy___68397: undefined,
-  prev___68404: undefined,
-  offset___68405: undefined,
-  band___68406: undefined,
-  y___68407: undefined,
+  camera___75560: undefined,
+  halfh___75564: undefined,
+  cx___75567: undefined,
+  cy___75574: undefined,
+  prev___75581: undefined,
+  offset___75582: undefined,
+  band___75583: undefined,
+  y___75584: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -47091,7 +46950,7 @@ const Math_FastRandom__C49203_VT = mkVTable({
     "pickRandom": Math_FastRandom_pickRandom__P49208,
   },
 });
-const lightsource_FlashlightLightSource__C67653_VT = mkVTable({
+const lightsource_FlashlightLightSource__C74830_VT = mkVTable({
   name: "FlashlightLightSource",
   numFields: 10,
   classNo: 21,
@@ -47120,19 +46979,19 @@ const lightsource_FlashlightLightSource__C67653_VT = mkVTable({
     "set/width": null,
     "height": null,
     "set/height": null,
-    "lightRange": lightsource_FlashlightLightSource_lightRange__P67660,
-    "set/lightRange": lightsource_FlashlightLightSource_lightRange__P67661,
-    "direction": lightsource_FlashlightLightSource_direction__P67663,
-    "set/direction": lightsource_FlashlightLightSource_direction__P67662,
-    "angleRange": lightsource_FlashlightLightSource_angleRange__P67664,
-    "set/angleRange": lightsource_FlashlightLightSource_angleRange__P67665,
-    "darkness": lightsource_FlashlightLightSource_darkness__P67666,
-    "set/darkness": lightsource_FlashlightLightSource_darkness__P67667,
-    "prepareOffset": lightsource_FlashlightLightSource_prepareOffset__P67668,
-    "apply": lightsource_FlashlightLightSource_apply__P67624,
+    "lightRange": lightsource_FlashlightLightSource_lightRange__P74837,
+    "set/lightRange": lightsource_FlashlightLightSource_lightRange__P74838,
+    "direction": lightsource_FlashlightLightSource_direction__P74840,
+    "set/direction": lightsource_FlashlightLightSource_direction__P74839,
+    "angleRange": lightsource_FlashlightLightSource_angleRange__P74841,
+    "set/angleRange": lightsource_FlashlightLightSource_angleRange__P74842,
+    "darkness": lightsource_FlashlightLightSource_darkness__P74843,
+    "set/darkness": lightsource_FlashlightLightSource_darkness__P74844,
+    "prepareOffset": lightsource_FlashlightLightSource_prepareOffset__P74845,
+    "apply": lightsource_FlashlightLightSource_apply__P74801,
   },
 });
-const lightsource_CircleLightSource__C67704_VT = mkVTable({
+const lightsource_CircleLightSource__C74881_VT = mkVTable({
   name: "CircleLightSource",
   numFields: 8,
   classNo: 22,
@@ -47158,14 +47017,14 @@ const lightsource_CircleLightSource__C67704_VT = mkVTable({
     "rings": null,
     "set/rings": null,
     "bandWidth": null,
-    "set/bandWidth": lightsource_CircleLightSource_bandWidth__P67708,
-    "centerRadius": lightsource_CircleLightSource_centerRadius__P67712,
-    "set/centerRadius": lightsource_CircleLightSource_centerRadius__P67713,
-    "prepareOffset": lightsource_CircleLightSource_prepareOffset__P67714,
-    "apply": lightsource_CircleLightSource_apply__P67715,
+    "set/bandWidth": lightsource_CircleLightSource_bandWidth__P74885,
+    "centerRadius": lightsource_CircleLightSource_centerRadius__P74889,
+    "set/centerRadius": lightsource_CircleLightSource_centerRadius__P74890,
+    "prepareOffset": lightsource_CircleLightSource_prepareOffset__P74891,
+    "apply": lightsource_CircleLightSource_apply__P74892,
   },
 });
-const multilights_MultiLightScreenEffect__C67417_VT = mkVTable({
+const multilights_MultiLightScreenEffect__C74594_VT = mkVTable({
   name: "MultiLightScreenEffect",
   numFields: 5,
   classNo: 23,
@@ -47184,16 +47043,16 @@ const multilights_MultiLightScreenEffect__C67417_VT = mkVTable({
     "set/_init": null,
     "running": null,
     "set/running": null,
-    "getInstance": multilights_MultiLightScreenEffect_getInstance__P67418,
-    "stopScreenEffect": multilights_MultiLightScreenEffect_stopScreenEffect__P67419,
-    "applyLightMapToScreen": multilights_MultiLightScreenEffect_applyLightMapToScreen__P67420,
-    "removeLightSource": multilights_MultiLightScreenEffect_removeLightSource__P67422,
-    "getFlashlight": multilights_MultiLightScreenEffect_getFlashlight__P67423,
-    "getCircleLight": multilights_MultiLightScreenEffect_getCircleLight__P67424,
-    "startScreenEffect": multilights_MultiLightScreenEffect_startScreenEffect__P67425,
-    "addFlashLightSource": multilights_MultiLightScreenEffect_addFlashLightSource__P67426,
-    "addLightSource": multilights_MultiLightScreenEffect_addLightSource__P67427,
-    "setColorRamp": multilights_MultiLightScreenEffect_setColorRamp__P67428,
+    "getInstance": multilights_MultiLightScreenEffect_getInstance__P74595,
+    "stopScreenEffect": multilights_MultiLightScreenEffect_stopScreenEffect__P74596,
+    "applyLightMapToScreen": multilights_MultiLightScreenEffect_applyLightMapToScreen__P74597,
+    "removeLightSource": multilights_MultiLightScreenEffect_removeLightSource__P74599,
+    "getFlashlight": multilights_MultiLightScreenEffect_getFlashlight__P74600,
+    "getCircleLight": multilights_MultiLightScreenEffect_getCircleLight__P74601,
+    "startScreenEffect": multilights_MultiLightScreenEffect_startScreenEffect__P74602,
+    "addFlashLightSource": multilights_MultiLightScreenEffect_addFlashLightSource__P74603,
+    "addLightSource": multilights_MultiLightScreenEffect_addLightSource__P74604,
+    "setColorRamp": multilights_MultiLightScreenEffect_setColorRamp__P74605,
   },
 });
 const scene_GameForeverHandler__C48964_VT = mkVTable({
@@ -48434,7 +48293,7 @@ const sprites_BaseSpriteSayRenderer__C48403_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["palette_ramps___67414","transparency16___50531","s___50532","testImages___50533","multilights_MultiLightScreenEffect_instance___67429"])
+const breakpoints = setupDebugger(1, ["palette_ramps___74591","transparency16___69075","s___76980","testImages___76993","multilights_MultiLightScreenEffect_instance___74606"])
 
-return _main___P68753
+return _main___P77381
 })
