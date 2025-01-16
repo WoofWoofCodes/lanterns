@@ -283,16 +283,7 @@ namespace lightsource {
         }
 
         //% group="Flashlight" blockSetVariable="flashlight"
-        //% blockCombine block="bandWidth" callInDebugger
-        set bandWidth(bandWidth: number) {
-            this.bandWidth = bandWidth
-        }
-        get bandWidth() {
-            return this.bandWidth
-        }
-
-        //% group="Flashlight" blockSetVariable="flashlight"
-        //% blockCombine block="bandWidth" callInDebugger
+        //% blockCombine block="shiver" callInDebugger
         set shiver(shiver: number) {
             this._shiver = shiver
         }
