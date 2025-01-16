@@ -10,9 +10,7 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "Lanterns.ts",
-        "tilemap.g.jres",
-        "tilemap.g.ts"
+        "Lanterns.ts"
     ],
     "testFiles": [
         "test.ts"
