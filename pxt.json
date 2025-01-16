@@ -1,5 +1,5 @@
 {
-    "name": "Lanterns",
+    "name": "pxt-Lanterns",
     "description": "",
     "dependencies": {
         "device": "*"

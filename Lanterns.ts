@@ -3,6 +3,7 @@ namespace multilights {
     // The top row is just the palette, each row gets darker
 
     const palette_ramps = image.ofBuffer(hex`e4100400ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000`);
+    
     /* const palette_ramps = img`
         . 1 2 3 4 5 6 7 8 9 a b c d e .
         . d a b e 4 8 6 c 6 b c . b c .
@@ -11,6 +12,7 @@ namespace multilights {
         . . . . . . . . . . . . . . . .
         . . . . . . . . . . . . . . . .
     ` */ // image version of the above buffer for those that want to see it
+
     export class MultiLightScreenEffect {//implements effects.BackgroundEffect {
 
         private lightSourceMap: { [id: string]: lightsource.LightSource; } = {}
@@ -116,11 +118,11 @@ namespace multilights {
             this._init = true
         }
 
-        addFlashLightSource(sprite: Sprite, bandWidth: number, direction: number, lightRange: number, angleRange: number, darkness: number): lightsource.FlashlightLightSource {
+        addFlashLightSource(sprite: Sprite, bandWidth: number, direction: number, lightRange: number, angleRange: number, darkness: number, shiver: number): lightsource.FlashlightLightSource {
             let newLightSource = this.flashlightSourceMap[sprite.id]
 
             if (!newLightSource) {
-                newLightSource = new lightsource.FlashlightLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness)
+                newLightSource = new lightsource.FlashlightLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
                 this.flashlightSourceMap[sprite.id] = newLightSource
                 
                 sprite.onDestroyed(function () {
@@ -131,11 +133,11 @@ namespace multilights {
             return newLightSource as lightsource.FlashlightLightSource
         }
 
-        addLightSource(sprite: Sprite, bandWidth: number, centerRadius: number): lightsource.CircleLightSource {
+        addLightSource(sprite: Sprite, bandWidth: number, centerRadius: number, shiver: number): lightsource.CircleLightSource {
             let newLightSource = this.lightSourceMap[sprite.id]
             
             if (!newLightSource) {
-                newLightSource = new lightsource.CircleLightSource(sprite, bandWidth, 4, centerRadius)
+                newLightSource = new lightsource.CircleLightSource(sprite, bandWidth, 4, centerRadius, shiver)
                 this.lightSourceMap[sprite.id] = newLightSource 
             }
 
@@ -168,30 +170,22 @@ namespace multilights {
 
     }
 
-    /*
 
     //%block
     //%group="Circlelight"
-    //%blockid=multiplightBandWidthOfSprite block="set %sprite=variables_get(mySprite) light band width to %bandWidth"
-    //%bandWidth.defl=4
-    export function bandWidthOf(sprite: Sprite, bandWidth: number) {
-        MultiLightScreenEffect.getInstance().bandWidthOfSprite(sprite, bandWidth)
-    }*/
-
-    //%block
-    //%group="Circlelight"
-    //%blockid=multiplightRemoveLightSource block="remove light source of %sprite=variables_get(mySprite) "
+    //%blockid=multiplightRemoveLightSource block="remove light source from %sprite=variables_get(mySprite) "
     export function removeLightSource(sprite: Sprite) {
         MultiLightScreenEffect.getInstance().removeLightSource(sprite)
     }
 
     //%block
     //%group="Circlelight"
-    //%blockid=multiplightAddLightSource block="add light source of %sprite=variables_get(mySprite) || with band width of %bandWidth and centerRadius of %centerRadius"
+    //%blockid=multiplightAddLightSource block="add light source to %sprite=variables_get(mySprite) band width %bandWidth centerRadius %centerRadius shiver %shiver"
     //%bandWidth.defl=4
     //%centerRadius.defl=1
-    export function addLightSource(sprite: Sprite, bandWidth: number = 4, centerRadius: number = 1) {
-        MultiLightScreenEffect.getInstance().addLightSource(sprite, bandWidth, centerRadius)
+    //%shiver.defl=2.5
+    export function addLightSource(sprite: Sprite, bandWidth: number = 4, centerRadius: number = 1, shiver: number = 2.5) {
+        MultiLightScreenEffect.getInstance().addLightSource(sprite, bandWidth, centerRadius, shiver)
     }
 
     //%block
@@ -202,13 +196,14 @@ namespace multilights {
 
     //%block
     //%group="Flashlight"
-    //%blockid=multiplightAddFlashlightSource block="attach flashlight to %sprite=variables_get(mySprite) direction %direction lightRange %lightRange angleRangle %angleRange || darkness %darkness"
+    //%blockid=multiplightAddFlashlightSource block="attach flashlight to %sprite=variables_get(mySprite) direction %direction lightRange %lightRange angleRangle %angleRange darkness %darkness shiver %shiver"
     //%direction.defl=0
     //%lightRange.defl=32
     //%angleRange.defl=30
     //%darkness.defl=0
-    export function addFlashLightSource(sprite: Sprite, direction: number, lightRange: number, angleRange: number, bandWidth: number = 5, darkness: number = 0) {
-        MultiLightScreenEffect.getInstance().addFlashLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness)
+    //%shiver.defl=2.5
+    export function addFlashLightSource(sprite: Sprite, direction: number, lightRange: number, angleRange: number, darkness: number = 0, shiver: number = 2.5, bandWidth: number = 5) {
+        MultiLightScreenEffect.getInstance().addFlashLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
     }
 
     //%block
@@ -269,7 +264,7 @@ namespace lightsource {
 
 
     //% blockNamespace="multilights"
-    //% blockGap=8
+    //% blockGap=16
     export class FlashlightLightSource implements LightSource {
         private sprite: Sprite;
         private _bandWidth: number;
@@ -278,6 +273,7 @@ namespace lightsource {
         private _angleRange: number;
         private _lightRange: number;
         private _darkness: number;
+        private _shiver: number
 
         private width: number;
         private height: number;
@@ -293,6 +289,15 @@ namespace lightsource {
         }
         get bandWidth() {
             return this.bandWidth
+        }
+
+        //% group="Flashlight" blockSetVariable="flashlight"
+        //% blockCombine block="bandWidth" callInDebugger
+        set shiver(shiver: number) {
+            this._shiver = shiver
+        }
+        get shiver() {
+            return this._shiver
         }
 
         //% group="Flashlight" blockSetVariable="flashlight"
@@ -354,13 +359,14 @@ namespace lightsource {
             this.height = halfh;
         }
 
-        constructor(sprite: Sprite, bandWidth: number, direction: number, lightRange: number, angleRange: number, darkness: number) {
+        constructor(sprite: Sprite, bandWidth: number, direction: number, lightRange: number, angleRange: number, darkness: number, shiver: number) {
             this.sprite = sprite
             this._bandWidth = bandWidth
             this._direction = direction % 360
             this._angleRange = angleRange / 2
             this._lightRange = lightRange
             this._darkness = darkness
+            this._shiver = shiver
 
             this.prepareOffset()
         }
@@ -381,8 +387,6 @@ namespace lightsource {
             let offset: number;
             let angleRangeLower = (360 + ((this._direction - this.angleRange) % 360)) % 360
             let angleRangeUpper = (360 + ((this._direction + this.angleRange) % 360)) % 360
-            
-
 
             // Go over each row and light the colors
             for (let y = -halfh; y < halfh; y++) {
@@ -437,10 +441,9 @@ namespace lightsource {
                     }
                 }
 
-
                 if (offset - x0 > 0) {
-                    offset += (Math.idiv(Math.randomRange(0, 11), 5))
-                    x0 -= (Math.idiv(Math.randomRange(0, 11), 5))
+                    offset += Math.idiv(Math.randomRange(0, this._shiver * 5), 5)
+                    x0 -= Math.idiv(Math.randomRange(0, this._shiver * 5), 5)
                     changeRowLightLevel(lightMap, cx + x0, cy + y, Math.abs(x0 - offset), this._darkness)
                 }
             }
@@ -458,6 +461,7 @@ namespace lightsource {
         private width: number
         private height: number
         private _centerRadius: number
+        private _shiver: number
 
         setBandWidth(bandWidth: number) {
             this._bandWidth = bandWidth
@@ -471,11 +475,22 @@ namespace lightsource {
         //% group="Circlelight" blockSetVariable="circleLight"
         //% blockCombine block="bandWidth" callInDebugger
         set bandWidth(bandWidth: number) {
-            this.setBandWidth(bandWidth)
+            this._bandWidth = bandWidth
+            this.prepareOffset()
         }
 
         get bandWidth() {
-            return this.getBandWidth()
+            return this._bandWidth
+        }
+
+        //% group="Circlelight" blockSetVariable="circleLight"
+        //% blockCombine block="shiver" callInDebugger
+        set shiver(shiver: number) {
+            this._shiver = shiver
+        }
+
+        get shiver() {
+            return this._shiver
         }
 
 
@@ -512,12 +527,13 @@ namespace lightsource {
             this.height = halfh;
         }
 
-        constructor(sprite: Sprite, bandWidth: number, public rings: number, centerRadius: number) {
+        constructor(sprite: Sprite, bandWidth: number, public rings: number, centerRadius: number, shiver: number) {
             this.sprite = sprite
             this._bandWidth = bandWidth
             this.rings = rings
             this._centerRadius = centerRadius
             this.prepareOffset()
+            this._shiver = shiver
         }
 
         apply(lightMap: Image) { // circle apply
@@ -540,7 +556,7 @@ namespace lightsource {
                 while (band >= 0) {
                     offset = this.offsetTable[y * this.rings + band - 1]
                     if (offset) {
-                        offset += (Math.idiv(Math.randomRange(0, 11), 5))
+                        offset += Math.idiv(Math.randomRange(0, this._shiver*5), 5)
                     }
 
                     // We reflect the circle-quadrant horizontally and vertically

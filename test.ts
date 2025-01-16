@@ -1,4 +1,4 @@
-
+/*
 const s = sprites.create(sprites.castle.princess2Front, SpriteKind.Player)
 controller.moveSprite(s)
 s.z = 10;
@@ -92,4 +92,4 @@ forever(function () {
     multilights.flashlightSourceAttachedTo(s).direction += 1
 })
 
-
+*/
