@@ -33,7 +33,7 @@ namespace multilights {
             this._init = false;
             this.bandPalettes = [];
             for (let band = 0; band < 6; band++) {
-                const buffer = pins.createBuffer(16);
+                const buffer = Buffer.create(16);
                 for (let i = 0; i < 16; i++) {
                     buffer[i] = palette_ramps.getPixel(i, band + 0);
                 }
