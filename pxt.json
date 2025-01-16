@@ -9,7 +9,6 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json",
         "Lanterns.ts"
     ],
     "testFiles": [
