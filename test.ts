@@ -18,8 +18,8 @@ const testImages = [
 
 scene.setBackgroundColor(Math.randomRange(2, 14))
 
-multilights.addFlashLightSource(s, 0.5, 80.5, 60.5, 10.5, 0.5)
 multilights.addLightSource(s, 10, 10)
+multilights.addFlashLightSource(s, 0.5, 80.5, 60.5, 10.5, 0.5)
 multilights.toggleLighting(true)
 
 scene.setBackgroundImage(image.ofBuffer(hex`e4100400ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000`))
@@ -80,13 +80,10 @@ multilights.setShaderRamp(img`
 
 forever(function() {
     pause(1000)
+    if (!sprites.allOfKind(SpriteKind.Player).length) return
     multilights.flashlightSourceAttachedTo(s).darkness = randint(0, 5)
     multilights.flashlightSourceAttachedTo(s).lightRange = randint(0, 100)
     multilights.circleLightSourceAttachedTo(s).centerRadius = randint(0, 15)
     multilights.circleLightSourceAttachedTo(s).bandWidth = randint(0, 4)
     multilights.flashlightSourceAttachedTo(s).angleRange = randint(10, 90)
-})
-
-forever(function () {
-    multilights.flashlightSourceAttachedTo(s).direction += 1
 })

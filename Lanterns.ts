@@ -72,8 +72,12 @@ namespace multilights {
             delete this.lightSourceMap[sprite.id]
         }
 
+        removeFlashlightSource(sprite: Sprite) {
+            delete this.flashlightSourceMap[sprite.id]
+        }
+
         getFlashlight(sprite: Sprite) {
-            return this.flashlightSourceMap[sprite.id]
+            return this.flashlightSourceMap[sprite.id] as lightsource.FlashlightLightSource
         }
 
         getCircleLight(sprite: Sprite) {
@@ -125,10 +129,13 @@ namespace multilights {
                 newLightSource = new lightsource.FlashlightLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
                 this.flashlightSourceMap[sprite.id] = newLightSource
                 
-                sprite.onDestroyed(function () {
+                sprite.onDestroyed(function () { 
                     removeLightSource(sprite)
+                    removeFlashlightSource(sprite)
                 })
             }
+            
+            
 
             return newLightSource as lightsource.FlashlightLightSource
         }
@@ -139,11 +146,14 @@ namespace multilights {
             if (!newLightSource) {
                 newLightSource = new lightsource.CircleLightSource(sprite, bandWidth, 4, centerRadius, shiver)
                 this.lightSourceMap[sprite.id] = newLightSource 
+
+                sprite.onDestroyed(function () {
+                    removeLightSource(sprite)
+                    removeFlashlightSource(sprite)
+                })
             }
 
-            sprite.onDestroyed(function () {
-                removeLightSource(sprite)
-            })
+            
 
             return newLightSource as lightsource.CircleLightSource
         }
@@ -176,6 +186,13 @@ namespace multilights {
     //%blockid=multilightRemoveLightSource block="remove light source from %sprite=variables_get(mySprite) "
     export function removeLightSource(sprite: Sprite) {
         MultiLightScreenEffect.getInstance().removeLightSource(sprite)
+    }
+
+    //%block
+    //%group="Flashlight"
+    //%blockid=multilightRemoveFlashlightSource block="remove flashlight source from %sprite=variables_get(mySprite) "
+    export function removeFlashlightSource(sprite: Sprite) {
+        MultiLightScreenEffect.getInstance().removeFlashlightSource(sprite)
     }
 
     //%block
