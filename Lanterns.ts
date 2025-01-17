@@ -173,14 +173,14 @@ namespace multilights {
 
     //%block
     //%group="Circlelight"
-    //%blockid=multiplightRemoveLightSource block="remove light source from %sprite=variables_get(mySprite) "
+    //%blockid=multilightRemoveLightSource block="remove light source from %sprite=variables_get(mySprite) "
     export function removeLightSource(sprite: Sprite) {
         MultiLightScreenEffect.getInstance().removeLightSource(sprite)
     }
 
     //%block
     //%group="Circlelight"
-    //%blockid=multiplightAddLightSource block="add light source to %sprite=variables_get(mySprite) band width %bandWidth centerRadius %centerRadius shiver %shiver"
+    //%blockid=multilightAddLightSource block="attach circleLight to %sprite=variables_get(mySprite) bandWidth %bandWidth centerRadius %centerRadius shiver %shiver"
     //%bandWidth.defl=4
     //%centerRadius.defl=1
     //%shiver.defl=2.5
@@ -196,7 +196,7 @@ namespace multilights {
 
     //%block
     //%group="Flashlight"
-    //%blockid=multiplightAddFlashlightSource block="attach flashlight to %sprite=variables_get(mySprite) direction %direction lightRange %lightRange angleRangle %angleRange darkness %darkness shiver %shiver"
+    //%blockid=multilightAddFlashlightSource block="attach flashlight to %sprite=variables_get(mySprite) direction %direction lightRange %lightRange angleRangle %angleRange darkness %darkness shiver %shiver"
     //%direction.defl=0
     //%lightRange.defl=32
     //%angleRange.defl=30
@@ -208,14 +208,14 @@ namespace multilights {
 
     //%block
     //%group="Flashlight"
-    //%blockid=multilightGetFlashlightSourceAttacedTo block="flashlight attached to %sprite=variables_get(mySprite)"
+    //%blockid=multilightGetFlashlightSourceAttachedTo block="flashlight attached to %sprite=variables_get(mySprite)"
     export function flashlightSourceAttachedTo(sprite: Sprite): lightsource.FlashlightLightSource {
         return MultiLightScreenEffect.getInstance().getFlashlight(sprite)
     }
 
     //%block
     //%group="Circlelight"
-    //%blockid=multilightGetCircleLightSourceAttacedTo block="Circlelight attached to %sprite=variables_get(mySprite)"
+    //%blockid=multilightGetCircleLightSourceAttachedTo block="circlelight attached to %sprite=variables_get(mySprite)"
     export function circleLightSourceAttachedTo(sprite: Sprite): lightsource.CircleLightSource {
         return MultiLightScreenEffect.getInstance().getCircleLight(sprite)
     }
@@ -229,7 +229,7 @@ namespace lightsource {
     }
 
     function changeRowLightLevel(lightMap: Image, x: number, y: number, width: number, lightLevel: number) {
-        for (let x0 = x | 0; x0 < (width + x | 0); x0++) { // the " | 0 " fixes an issue with floating point imprecision causing the For loop to skip some X values, an issue still present in the original riknoll extension in the form of weird missing lines.
+        for (let x0 = x | 0; x0 < (width + x | 0); x0++) { // the " | 0 " fixes an issue with floating point imprecision causing the For loop to skip some X values, an issue still present in the original Multilights extension in the form of weird missing lines that are hard to find.
             let currentLightLevel = lightMap.getPixel(x0, y)
             lightMap.setPixel(x0, y, Math.min(lightLevel, currentLightLevel))
         }
@@ -443,7 +443,7 @@ namespace lightsource {
 
 
     //% blockNamespace="multilights"
-    //% blockGap=8
+    //% blockGap=16
     export class CircleLightSource implements LightSource {
         private sprite: Sprite
         offsetTable: Buffer;
