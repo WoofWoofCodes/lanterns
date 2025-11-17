@@ -1,9 +1,14 @@
 //% icon="\uf185" color="#8f1fff"
 namespace multilights {
-    // The top row is just the palette, each row gets darker //pins
+    // The top row is just the palette, each row gets darker //pins //Multilights
 
     const palette_ramps = image.ofBuffer(hex`e4100400ffff0000d1cb0000a2ff0000b3fc0000e4fc000045ce000086fc000067c80000c8ff000069c80000bafc0000cbff0000fcff0000bdfc0000ceff0000ffff0000`);
-    
+    const paletteRampBuffer = Buffer.create(16 * 16)
+    for (let shadeLevel = 0; shadeLevel < palette_ramps.height; shadeLevel++) {
+        for (let i = 0; i < 16; i++) {
+            paletteRampBuffer[shadeLevel * 16 + i] = palette_ramps.getPixel(i, shadeLevel)
+        }
+    }
     /* const palette_ramps = img`
         . 1 2 3 4 5 6 7 8 9 a b c d e .
         . d a b e 4 8 6 c 6 b c . b c .
@@ -13,54 +18,55 @@ namespace multilights {
         . . . . . . . . . . . . . . . .
     ` */ // image version of the above buffer for those that want to see it
 
-    export class MultiLightScreenEffect {//implements effects.BackgroundEffect {
+    let stateStack: LanternsState[]
+
+    export function _state() {
+        _init();
+        return stateStack[stateStack.length - 1];
+    }
+
+    export function _init() {
+        if (stateStack) return;
+
+        stateStack = [
+            new LanternsState
+        ]
+
+        game.addScenePushHandler(() => {
+            stateStack.push(new LanternsState())
+        })
+
+        game.addScenePopHandler(() => {
+            stateStack.pop()
+
+            if (stateStack.length === 0) {
+                stateStack.push(new LanternsState());
+            }
+        })
+    }
+    
+
+    export class LanternsState {
 
         private lightSourceMap: { [id: string]: lightsource.LightSource; } = {}
         private flashlightSourceMap: { [id: string]: lightsource.FlashlightLightSource; } = {}
-        private bandPalettes: Buffer[] = []
         private _init: boolean = false
-        private running = false;
-        private static instance: MultiLightScreenEffect
-
-        public static getInstance(): MultiLightScreenEffect {
-            if (MultiLightScreenEffect.instance == null) {
-                MultiLightScreenEffect.instance = new MultiLightScreenEffect()
-            }
-            return MultiLightScreenEffect.instance
-        }
-
+        private _running = false;
+        private renderable: scene.Renderable
+        
         constructor() {
             this._init = false;
-            this.bandPalettes = [];
-            for (let band = 0; band < 6; band++) {
-                const buffer = Buffer.create(16);
-                for (let i = 0; i < 16; i++) {
-                    buffer[i] = palette_ramps.getPixel(i, band + 0);
-                }
-                this.bandPalettes.push(buffer);
-            }
         }
 
-        stopScreenEffect() {
-            this.running = false;
+        get running() {
+            return this._running
         }
 
-        applyLightMapToScreen(lightMap: Image) {
-            for (let y = 0; y < screen.height; y++) {
-                let begin = 0, currentLightLevel = lightMap.getPixel(0, y)
-                for (let x = 1; x < screen.width; x++) {
-                    if (currentLightLevel != lightMap.getPixel(x, y)) {
-                        if (currentLightLevel > 0) {
-                            screen.mapRect(begin, y, x - begin, 1, this.bandPalettes[currentLightLevel])
-                        }
-                        currentLightLevel = lightMap.getPixel(x, y)
-                        begin = x
-                    }
-                }
-                if (currentLightLevel > 0) {
-                    screen.mapRect(begin, y, screen.width - begin, 1, this.bandPalettes[currentLightLevel])
-                }
+        set running(running: boolean) {
+            if (running && !this._init) {
+                this.startScreenEffect()
             }
+            this._running = running
         }
 
         bandWidthOfSprite(sprite: Sprite, bandWidth: number) {
@@ -85,20 +91,19 @@ namespace multilights {
         }
 
         startScreenEffect() {
-            this.running = true
-
             if (this._init) {
                 return
             }
 
-            scene.createRenderable(91, () => {
-                if (!this.running) {
+            this.renderable = scene.createRenderable(91, () => {
+                //console.log("running")
+                if (!this._running) {
                     return;
                 }
 
                 // 0. prepare a empty light map with radius 0
                 let lightMap = image.create(screen.width, screen.height)
-                lightMap.fill(5)
+                lightMap.fill(15)
                 
                 // 1. prepare light map for each light source
                 for (const key of Object.keys(this.lightSourceMap)) {
@@ -111,12 +116,9 @@ namespace multilights {
                 }
 
                 // 2. apply light map to screen
+                
                 //screen.drawTransparentImage(lightMap, 0, 0) // for testing
-                this.applyLightMapToScreen(lightMap)
-            })
-
-            game.addScenePopHandler((oldScene: scene.Scene) => {
-                this._init = false
+                helpers.mapImage(screen, lightMap, 0, 0, paletteRampBuffer)
             })
 
             this._init = true
@@ -135,7 +137,6 @@ namespace multilights {
                 })
             }
             
-            
 
             return newLightSource as lightsource.FlashlightLightSource
         }
@@ -153,19 +154,15 @@ namespace multilights {
                 })
             }
 
-            
 
             return newLightSource as lightsource.CircleLightSource
         }
 
         setColorRamp(ramp: Image) {
-            this.bandPalettes = [];
-            for (let band = 0; band < 6; band++) {
-                const buffer = Buffer.create(16);
+            for (let shadeLevel = 0; shadeLevel < ramp.height; shadeLevel++) {
                 for (let i = 0; i < 16; i++) {
-                    buffer[i] = ramp.getPixel(i, band + 0);
+                    paletteRampBuffer[shadeLevel * 16 + i] = ramp.getPixel(i, shadeLevel)
                 }
-                this.bandPalettes.push(buffer);
             }
         }
     }
@@ -173,26 +170,29 @@ namespace multilights {
     //%block
     export function toggleLighting(on: boolean) {
         if (on) {
-            MultiLightScreenEffect.getInstance().startScreenEffect()
+            _state().running = true
         } else {
-            MultiLightScreenEffect.getInstance().stopScreenEffect()
+            _state().running = false
         }
-
     }
 
+    //%block
+    export function lightingIsOn() {
+        return _state().running
+    }
 
     //%block
     //%group="Circlelight"
     //%blockid=multilightRemoveLightSource block="remove light source from %sprite=variables_get(mySprite) "
     export function removeLightSource(sprite: Sprite) {
-        MultiLightScreenEffect.getInstance().removeLightSource(sprite)
+        _state().removeLightSource(sprite)
     }
 
     //%block
     //%group="Flashlight"
     //%blockid=multilightRemoveFlashlightSource block="remove flashlight source from %sprite=variables_get(mySprite) "
     export function removeFlashlightSource(sprite: Sprite) {
-        MultiLightScreenEffect.getInstance().removeFlashlightSource(sprite)
+        _state().removeFlashlightSource(sprite)
     }
 
     //%block
@@ -202,13 +202,13 @@ namespace multilights {
     //%centerRadius.defl=1
     //%shiver.defl=2.5
     export function addLightSource(sprite: Sprite, bandWidth: number = 4, centerRadius: number = 1, shiver: number = 2.5) {
-        MultiLightScreenEffect.getInstance().addLightSource(sprite, bandWidth, centerRadius, shiver)
+        _state().addLightSource(sprite, bandWidth, centerRadius, shiver)
     }
 
     //%block
-    //%blockid=multiplightSetShaderRamp block="set Shader Ramp to %picture=variables_get(picture)"
+    //%blockid=multilightSetShaderRamp block="set Shader Ramp to %picture=variables_get(picture)"
     export function setShaderRamp(ramp: Image) {
-        MultiLightScreenEffect.getInstance().setColorRamp(ramp)
+        _state().setColorRamp(ramp)
     }
 
     //%block
@@ -220,21 +220,21 @@ namespace multilights {
     //%darkness.defl=0
     //%shiver.defl=2.5
     export function addFlashLightSource(sprite: Sprite, direction: number, lightRange: number, angleRange: number, darkness: number = 0, shiver: number = 2.5, bandWidth: number = 5) {
-        MultiLightScreenEffect.getInstance().addFlashLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
+        _state().addFlashLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
     }
 
     //%block
     //%group="Flashlight"
     //%blockid=multilightGetFlashlightSourceAttachedTo block="flashlight attached to %sprite=variables_get(mySprite)"
     export function flashlightSourceAttachedTo(sprite: Sprite): lightsource.FlashlightLightSource {
-        return MultiLightScreenEffect.getInstance().getFlashlight(sprite)
+        return _state().getFlashlight(sprite)
     }
 
     //%block
     //%group="Circlelight"
     //%blockid=multilightGetCircleLightSourceAttachedTo block="circlelight attached to %sprite=variables_get(mySprite)"
     export function circleLightSourceAttachedTo(sprite: Sprite): lightsource.CircleLightSource {
-        return MultiLightScreenEffect.getInstance().getCircleLight(sprite)
+        return _state().getCircleLight(sprite)
     }
 }
 
@@ -290,7 +290,7 @@ namespace lightsource {
         private _angleRange: number;
         private _lightRange: number;
         private _darkness: number;
-        private _shiver: number
+        private _shiver: number;
 
         private width: number;
         private height: number;
@@ -414,13 +414,15 @@ namespace lightsource {
                     x1 = y / Math.tan(degreeToRadius(angleRangeLower))
                     x2 = y / Math.tan(degreeToRadius(angleRangeUpper))
 
+
                     if (angleRangeLower == 90 || angleRangeLower == 270) {
                         x1 = 0
                     }
                     if (angleRangeUpper == 90 || angleRangeUpper == 270) {
                         x2 = 0
                     }
-                    
+
+
                     if (isValid(x1, y, angleRangeLower)) {
                         if (isValid(x2, y, angleRangeUpper)) {
                             if (x1 > x2) {
@@ -464,6 +466,7 @@ namespace lightsource {
     export class CircleLightSource implements LightSource {
         private sprite: Sprite
         offsetTable: Buffer;
+        baseImage: Image // image of the circle light without shiver
 
         private _bandWidth: number
         private width: number
@@ -494,7 +497,8 @@ namespace lightsource {
         //% group="Circlelight" blockSetVariable="circleLight"
         //% blockCombine block="shiver" callInDebugger
         set shiver(shiver: number) {
-            this._shiver = shiver
+            this._shiver = Math.max(0, (shiver | 0))
+            this.prepareOffset()
         }
 
         get shiver() {
@@ -533,6 +537,11 @@ namespace lightsource {
 
             this.width = halfh;
             this.height = halfh;
+
+            this.baseImage = image.create(halfh * 2 + this._shiver * 2, halfh * 2 + 2)
+            this.baseImage.fill(14)
+            this.setup(this.baseImage)
+            //game.splash(halfh)
         }
 
         constructor(sprite: Sprite, bandWidth: number, public rings: number, centerRadius: number, shiver: number) {
@@ -540,16 +549,15 @@ namespace lightsource {
             this._bandWidth = bandWidth
             this.rings = rings
             this._centerRadius = centerRadius
-            this.prepareOffset()
             this._shiver = shiver
+            this.prepareOffset()
         }
 
-        apply(lightMap: Image) { // circle apply
-            const camera = game.currentScene().camera;
+        setup(lightMap: Image) {
             const halfh = this.width;
-            const cx = this.sprite.x - camera.drawOffsetX;
-            const cy = this.sprite.y - camera.drawOffsetY;
-
+            const cx = halfh + this._shiver
+            const cy = halfh
+            
             let prev: number;
             let offset: number;
             let band: number;
@@ -563,9 +571,9 @@ namespace lightsource {
                 // Darken each concentric circle by remapping the colors
                 while (band >= 0) {
                     offset = this.offsetTable[y * this.rings + band - 1]
-                    if (offset) {
-                        offset += Math.idiv(Math.randomRange(0, this._shiver*5), 5)
-                    }
+                    //if (offset) {
+                    //    offset += Math.idiv(Math.randomRange(-this._shiver * 5, this._shiver * 5), 10)
+                    //}
 
                     // We reflect the circle-quadrant horizontally and vertically
                     changeRowLightLevel(lightMap, cx + offset, cy + y + 1, prev - offset, band)
@@ -585,5 +593,50 @@ namespace lightsource {
                 }
             }
         }
+        
+        apply(lightMap: Image) { // circle apply
+            if (!this._shiver) {
+                const camera = game.currentScene().camera;
+                helpers.mergeImage(lightMap, this.baseImage, (this.sprite.left | 0) + (this.sprite.width >> 1) - camera.drawOffsetX - (this.width | 0), (this.sprite.bottom | 0) - (this.sprite.height >> 1) - camera.drawOffsetY - (this.height | 0) - 1)
+            } else {
+                const temp = this.baseImage.clone()
+                //const temp = image.create(this.baseImage.width, this.baseImage.height)
+                //temp.fill(14)
+                const halfh = this.width;
+                const cx = halfh + this._shiver
+                const cy = halfh
+
+                let prev: number;
+                let offset: number;
+                let band: number;
+                for (let y = 0; y < halfh; y++) {
+                    band = this.rings;
+                    prev = 0;
+                    offset = this.offsetTable[y * this.rings + band - 1]
+
+                    // Darken each concentric circle by remapping the colors
+                    while (band >= 0) {
+                        offset = this.offsetTable[y * this.rings + band - 1]
+                        if (prev) {
+                            let rand = Math.randomRange(0, this._shiver)
+                
+                            // We reflect the circle-quadrant horizontally and vertically
+                            changeRowLightLevel(temp, cx + prev, cy + y + 1, rand, band) // bottom right
+                            changeRowLightLevel(temp, cx - prev - rand, cy + y + 1, rand, band) // bottom left
+                            changeRowLightLevel(temp, cx + prev, cy - y, rand, band) // top right
+                            changeRowLightLevel(temp, cx - prev - rand, cy - y, rand, band) // top left
+
+                        }
+
+                        prev = offset;
+                        band--;
+                    }
+                }
+            
+                const camera = game.currentScene().camera;
+                helpers.mergeImage(lightMap, temp, (this.sprite.left | 0) + (this.sprite.width >> 1) - camera.drawOffsetX - (this.width | 0) - (this._shiver | 0), (this.sprite.bottom | 0) - (this.sprite.height >> 1) - camera.drawOffsetY - (this.height | 0) - 1)
+            }
+        }
     }
 }
+

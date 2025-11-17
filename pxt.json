@@ -3,19 +3,22 @@
     "version": "1.1.0",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "shader": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
         "Lanterns.ts"
     ],
     "testFiles": [
-        "test.ts"
+        "test.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "main.blocks",
+        "main.ts"
     ],
     "targetVersions": {
-        "target": "1.12.58",
+        "target": "2.0.62",
         "targetId": "arcade"
     },
     "supportedTargets": [
