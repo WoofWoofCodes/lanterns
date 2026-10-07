@@ -14,14 +14,19 @@ controller.moveSprite(s)
 s.z = 10;
 scene.cameraFollowSprite(s)
 controller.moveSprite(s)
-
+s.z = 92
 scene.setBackgroundColor(Math.randomRange(2, 14))
 
 //multilights.addLightSource(s, 10, 10)
 //multilights.addFlashLightSource(s, 90, 80, 40)
 //multilights.circleLightSourceAttachedTo(s).centerRadius = 5
 //multilights.circleLightSourceAttachedTo(s).shiver = 0
-multilights.addFlashLightSource(s, 0, 50, 140)
+multilights.addFlashLightSource(s, 0, 50, 360 / 4)
+let b = sprites.create(img`
+    2
+`)
+controller.moveSprite(b)
+multilights.addLightSource(b, 5, 5, 0)
 multilights.flashlightSourceAttachedTo(s).shiver = 0
 //multilights.circleLightSourceAttachedTo(s).bandWidth = 9.5
 multilights.toggleLighting(true)

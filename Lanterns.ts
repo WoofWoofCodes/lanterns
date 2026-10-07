@@ -44,7 +44,7 @@ namespace multilights {
             }
         })
     }
-    
+
 
     export class LanternsState {
 
@@ -53,7 +53,8 @@ namespace multilights {
         private _init: boolean = false
         private _running = false;
         private renderable: scene.Renderable
-        
+        backgroundLightLevel = 15
+
         constructor() {
             this._init = false;
         }
@@ -103,8 +104,8 @@ namespace multilights {
 
                 // 0. prepare a empty light map with radius 0
                 let lightMap = image.create(screen.width, screen.height)
-                lightMap.fill(15)
-                
+                lightMap.fill(this.backgroundLightLevel)
+
                 // 1. prepare light map for each light source
                 for (const key of Object.keys(this.lightSourceMap)) {
                     let lightsource = this.lightSourceMap[key]
@@ -116,7 +117,7 @@ namespace multilights {
                 }
 
                 // 2. apply light map to screen
-                
+
                 //screen.drawTransparentImage(lightMap, 0, 0) // for testing
                 helpers.mapImage(screen, lightMap, 0, 0, paletteRampBuffer)
             })
@@ -130,23 +131,23 @@ namespace multilights {
             if (!newLightSource) {
                 newLightSource = new lightsource.FlashlightLightSource(sprite, bandWidth, direction, lightRange, angleRange, darkness, shiver)
                 this.flashlightSourceMap[sprite.id] = newLightSource
-                
-                sprite.onDestroyed(function () { 
+
+                sprite.onDestroyed(function () {
                     removeLightSource(sprite)
                     removeFlashlightSource(sprite)
                 })
             }
-            
+
 
             return newLightSource as lightsource.FlashlightLightSource
         }
 
         addLightSource(sprite: Sprite, bandWidth: number, centerRadius: number, shiver: number): lightsource.CircleLightSource {
             let newLightSource = this.lightSourceMap[sprite.id]
-            
+
             if (!newLightSource) {
                 newLightSource = new lightsource.CircleLightSource(sprite, bandWidth, 4, centerRadius, shiver)
-                this.lightSourceMap[sprite.id] = newLightSource 
+                this.lightSourceMap[sprite.id] = newLightSource
 
                 sprite.onDestroyed(function () {
                     removeLightSource(sprite)
@@ -179,6 +180,18 @@ namespace multilights {
     //%block
     export function lightingIsOn() {
         return _state().running
+    }
+    /**
+     * Sets default background light level, applied to the whole screen.
+     * Darkness increases with value, default is 15, which is the maximum.
+     */
+    //% block="set background darkness level $level"
+    export function setBackgroundLightLevel(level: number) {
+        _state().backgroundLightLevel = Math.constrain(level, 0, 15)
+    }
+    //%block
+    export function backgroundLightLevel() {
+        return _state().backgroundLightLevel
     }
 
     //%block
@@ -451,6 +464,7 @@ namespace lightsource {
                     }
                 }
 
+
                 if (offset - x0 > 0) {
                     offset += Math.idiv(Math.randomRange(0, this._shiver * 5), 5)
                     x0 -= Math.idiv(Math.randomRange(0, this._shiver * 5), 5)
@@ -557,7 +571,7 @@ namespace lightsource {
             const halfh = this.width;
             const cx = halfh + this._shiver
             const cy = halfh
-            
+
             let prev: number;
             let offset: number;
             let band: number;
@@ -593,7 +607,7 @@ namespace lightsource {
                 }
             }
         }
-        
+
         apply(lightMap: Image) { // circle apply
             if (!this._shiver) {
                 const camera = game.currentScene().camera;
@@ -619,7 +633,7 @@ namespace lightsource {
                         offset = this.offsetTable[y * this.rings + band - 1]
                         if (prev) {
                             let rand = Math.randomRange(0, this._shiver)
-                
+
                             // We reflect the circle-quadrant horizontally and vertically
                             changeRowLightLevel(temp, cx + prev, cy + y + 1, rand, band) // bottom right
                             changeRowLightLevel(temp, cx - prev - rand, cy + y + 1, rand, band) // bottom left
@@ -632,7 +646,7 @@ namespace lightsource {
                         band--;
                     }
                 }
-            
+
                 const camera = game.currentScene().camera;
                 helpers.mergeImage(lightMap, temp, (this.sprite.left | 0) + (this.sprite.width >> 1) - camera.drawOffsetX - (this.width | 0) - (this._shiver | 0), (this.sprite.bottom | 0) - (this.sprite.height >> 1) - camera.drawOffsetY - (this.height | 0) - 1)
             }
